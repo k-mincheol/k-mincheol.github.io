@@ -1,12 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstarp -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- common -->
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+
+    </style>
     <title>Document</title>
 </head>
+
 <body>
-    <div>test테스트</div>
+    <div id="wrap">
+        <!-- header -->
+        <header class="w-100 position-fixed d-flex align-items-center justify-content-between">
+            <strong class="fs-24">Web Portfolio</strong>
+            <a class="btn-link" target="_blank" rel="noopener"
+                href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mincheol.kmc@gmail.com">mincheol.kmc@gmail.com</a>
+        </header>
+
+        <!-- page 1 -->
+        <section class="w-100 h-100 p-5 text-center">
+            <h1 class="typing1 font-weight-bold"></h1>
+            <h1 class="typing2 font-weight-bold"></h1>
+
+            <!-- 스크롤 버튼 -->
+            <a class="scroll-link" href="#content">
+                <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 121"
+                    preserveAspectRatio="xMidYMid meet">
+                    <g fill="none" fill-rule="evenodd">
+                        <rect width="70" height="118" x="1.5" y="1.5" stroke="#000" stroke-width="3" rx="36" />
+                        <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#000" />
+                    </g>
+                </svg>
+            </a>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+        integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+
+    <script>
+        var typingBool = false;
+        var typingIdx1 = 0;
+        var typingIdx2 = 0;
+
+        // 타이핑될 텍스트를 가져온다 
+        var typingTxt1 = "안녕하세요!";
+        var typingTxt2 = "웹 퍼블리셔 김민철입니다.";
+
+        typingTxt1 = typingTxt1.split(""); // 한글자씩 자른다. 
+        typingTxt2 = typingTxt2.split(""); // 한글자씩 자른다.
+
+        if (typingBool == false) {
+            // 타이핑이 진행되지 않았다면
+            typingBool = true;
+            var tyInt = setInterval(typing, 100); // 반복동작
+        }
+
+        function typing() {
+            if (typingIdx1 < typingTxt1.length) {
+                $(".typing1").append(typingTxt1[typingIdx1]);
+                typingIdx1++;
+            } else if (typingIdx1 == typingTxt1.length) {
+                if (typingIdx2 < typingTxt2.length) {
+                    $(".typing2").append(typingTxt2[typingIdx2]);
+                    typingIdx2++;
+                }
+            } else {
+                //끝나면 반복종료
+                clearInterval(tyInt);
+            }
+        }
+
+        // 스크롤 버튼 누를 시 아래로 이동
+        jQuery(document).ready(function ($) {
+
+            $('a.scroll-link').click(function (e) {
+                e.preventDefault();
+                $id = $(this).attr('href');
+                $('body,html').animate({
+                    scrollTop: $($id).offset().top - 20
+                }, 750);
+            });
+
+        });
+    </script>
+
 </body>
+
 </html>
