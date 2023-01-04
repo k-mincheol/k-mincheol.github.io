@@ -4,26 +4,60 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-size: 14px;
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        margin: 0!important;
+        padding: 0!important;
+    }
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: absolute;
+    height: 5rem;
+    padding: 0 5%;
+    box-sizing: border-box;
+    z-index: 999;
+    background-color: rgba(10, 25, 47, 0.7);
+
+    ol {
+        li {
+            a {
+                display: flex;
+                align-items: baseline;
+                color: #60f6d3;
+                padding: 0 1rem;
+
+                span {
+                    margin-right: 0.5rem;
+                    color: #60f6d3;
+                }
+
+                h6 {
+                    color: #ccd6f6;
+                }
+            }
+        }
+    }
 }
 
 #wrap {
     width: 100%;
     height: 100%;
-}
-
-header {
-    position: absolute;
-    padding: 2vw;
-    box-sizing: border-box;
-    z-index: 999;
-}
-
-a {
-    text-decoration: none;
-}
-
-.btn-link {
-    color: #333333;
 }
 
 // 폰트 사이즈
@@ -56,7 +90,9 @@ a {
 }
 
 @keyframes scroll {
-    0%, 20% {
+
+    0%,
+    20% {
         transform: translateY(0) scaleY(1);
     }
 
