@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <!-- fullpage -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css"
-        integrity="sha512-/AilQf/shuEGfh8c3DoIqcIqHZCKpiImSyt+fxIKJphHiNa6QMPb6AbDly6rkjmGr/5OZd35JtvVkbEKnCZO+A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- common -->
     <link rel="stylesheet" href="./css/common.css">
@@ -26,47 +27,90 @@
     <div id="wrap">
         <!-- header -->
         <header class="w-100 position-fixed d-flex align-items-center justify-content-between">
-            <strong class="fs-24 text-white">Web Portfolio</strong>
+            <strong class="fs-24 text-white" data-aos-delay="0" data-aos="fade-down">Web Portfolio</strong>
             <nav>
                 <ol class="d-flex align-items-center">
-                    <li><a href=""><span>01.</span>
+                    <li data-aos-delay="100" data-aos="fade-down"><a href=""><span>01.</span>
                             <h6>소개</h6>
                         </a></li>
-                    <li><a href=""><span>02.</span>
-                            <h6>경력사항</h6>
+                    <li data-aos-delay="250" data-aos="fade-down"><a href=""><span>02.</span>
+                            <h6>경력 & 프로젝트</h6>
                         </a></li>
-                    <li><a href=""><span>03.</span>
-                            <h6>프로젝트</h6>
-                        </a></li>
-                    <li><a href=""><span>04.</span>
+                    <li data-aos-delay="400" data-aos="fade-down"><a href=""><span>03.</span>
                             <h6>자격증 및 교육</h6>
                         </a></li>
-                    <li><a href=""><span>05.</span>
+                    <li data-aos-delay="550" data-aos="fade-down"><a href=""><span>04.</span>
                             <h6>기술스택</h6>
                         </a></li>
                 </ol>
             </nav>
         </header>
 
-        <article id="fullpage">
-            <section class="section bg-dark">
-                <article class="slide text-center">
-                    <h1 class="typing1 font-weight-bold text-white"></h1>
-                    <h1 class="typing2 font-weight-bold text-white"></h1>
+        <section class="full-wrap h-100 m-auto">
+            <article class="article-box text-center pf-welcome" style="min-height: 100vh;">
+                <div>
+                    <h1 class="intro-text font-weight-bold text-white mb-2" data-aos-delay="500" data-aos="fade-up">
+                        <span>안녕하세요!</span>
+                    </h1>
+                    <h1 class="intro-text font-weight-bold text-white" data-aos-delay="600" data-aos="fade-up">
+                        <span>웹퍼블리셔 <strong>김민철</strong>입니다.</span>
+                    </h1>
+                </div>
 
-                    <!-- 스크롤 버튼 -->
-                    <a class="scroll-link">
-                        <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 121"
-                            preserveAspectRatio="xMidYMid meet">
-                            <g fill="none" fill-rule="evenodd">
-                                <rect width="70" height="118" x="1.5" y="1.5" stroke="#fff" stroke-width="3" rx="36" />
-                                <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#fff" />
-                            </g>
-                        </svg>
-                    </a>
-                </article>
-            </section>
-        </article>
+                <!-- 스크롤 버튼 -->
+                <a class="scroll-link">
+                    <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 121"
+                        preserveAspectRatio="xMidYMid meet">
+                        <g fill="none" fill-rule="evenodd">
+                            <rect width="70" height="118" x="1.5" y="1.5" stroke="#fff" stroke-width="3" rx="36" />
+                            <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#fff" />
+                        </g>
+                    </svg>
+                </a>
+            </article>
+
+            <!-- 자기소개 -->
+            <article class="article-box pf-aboutme">
+                <h2 class="article-title">
+                    <span>01.</span>
+                    자기소개
+                </h2>
+                <div class="aboutme-wrap">
+                    <div class="aboutme-text">
+                        안녕하세요. ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    </div>
+                    <div class="aboutme-profile">
+                        <img src="./image/tempimage.png" alt="">
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-box pf-exprience">
+                <h2 class="article-title">
+                    <span>02.</span>
+                    경력 & 프로젝트
+                </h2>
+                <div class="exprience-list">
+                    <div class="list-nav">
+                        <ul>
+                            <li class="tab-item cursor-pointer active" data-id="0" onclick="tavClickEvt(this)">야근몬스터
+                            </li>
+                            <li class="tab-item cursor-pointer" data-id="1" onclick="tavClickEvt(this)">기원킹몬스터</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exprience-detail">
+                    <div class="company-name"></div>
+                    <div class="company-date">
+                        <div class="date"></div>
+                    </div>
+                    <div class="company-detail"></div>
+                    <div class="project-list">
+                        
+                    </div>
+                </div>
+            </article>
+        </section>
     </div>
 
     <!-- jquery -->
@@ -75,52 +119,54 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
         integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
 
-    <!-- fullpage -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"
-        integrity="sha512-XOpdFagEEv9XMxN/2EdvFL/PfGtFDjX+AkRznsFHDtdC05YWdkMnz5JZUfrbnEabOQaMc7YNTl2xPbOu3J858Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- 프로젝트 리스트 elem -->
+    <script type="text/html" id="project-elem">
+        <div class="project-elem d-flex align-items-center cursor-pointer">
+            <i class="ri-arrow-right-s-line mr-1"></i>
+            <span class="project-name">{{NAME}}</span>
+        </div>
+    </script>
+
+    <script src="./js/exprience_list.js"></script>
 
     <script>
-        var typingBool = false;
-        var typingIdx1 = 0;
-        var typingIdx2 = 0;
+        // 경력 & 프로젝트 탭 이벤트
+        function tavClickEvt(elem) {
+            let tabElems = document.querySelectorAll(".tab-item");
+            let targetId = elem.getAttribute("data-id");
+            let datas = exprienceDatas[targetId];
+            let companyName = document.querySelector(".company-name");
+            let date = document.querySelector(".date");
+            let companyDetail = document.querySelector(".company-detail");
+            let projectListWrap = document.querySelector(".project-list");
 
-        // 타이핑될 텍스트를 가져온다 
-        var typingTxt1 = "안녕하세요!";
-        var typingTxt2 = "웹 퍼블리셔 김민철입니다.";
-
-        typingTxt1 = typingTxt1.split(""); // 한글자씩 자른다. 
-        typingTxt2 = typingTxt2.split(""); // 한글자씩 자른다.
-
-        if (typingBool == false) {
-            // 타이핑이 진행되지 않았다면
-            typingBool = true;
-            var tyInt = setInterval(typing, 100); // 반복동작
-        }
-
-        function typing() {
-            if (typingIdx1 < typingTxt1.length) {
-                $(".typing1").append(typingTxt1[typingIdx1]);
-                typingIdx1++;
-            } else if (typingIdx1 == typingTxt1.length) {
-                if (typingIdx2 < typingTxt2.length) {
-                    $(".typing2").append(typingTxt2[typingIdx2]);
-                    typingIdx2++;
+            // 기존 active되어있는 탭 제거 후 클릭한 탭 active
+            for (let i = 0; i < tabElems.length; i++) {
+                if (tabElems[i].classList.contains("active")) {
+                    tabElems[i].classList.remove("active");
                 }
-            } else {
-                //끝나면 반복종료
-                clearInterval(tyInt);
+            }
+            elem.classList.add("active");
+            
+            companyName.innerText = datas.name;
+            date.innerText = datas.date;
+            companyDetail.innerText = datas.detail;
+
+            // 프로젝트 리스트 초기화
+            projectListWrap.innerHTML = "";
+            // 프로젝트 리스트 추가
+            for (let i = 0; i < datas.project_list.length; i++) {
+                projectElem = document.getElementById('project-elem').innerHTML;
+                projectElem = projectElem.replaceAll(/{{NAME}}/gi, datas.project_list[i].name);
+                projectListWrap.innerHTML += projectElem;
             }
         }
 
-        $(document).ready(function () {
-            $('#fullpage').fullpage({
-                //options here
-                autoScrolling: true,
-            });
-        });
+        AOS.init();
     </script>
-
 </body>
 
 </html>

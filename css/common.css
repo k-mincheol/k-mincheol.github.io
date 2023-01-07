@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 14px;
+  background-color: #203b62;
 }
 
 h1 {
@@ -136,10 +137,14 @@ header ol li a h6 {
   font-size: 24px !important;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .scroll-link {
   position: absolute;
   width: 1.5vw;
-  bottom: 2rem;
+  bottom: 10rem;
   transform: translate(-50%);
 }
 .scroll-link .mouse {
@@ -178,4 +183,81 @@ header ol li a h6 {
     transform: translateY(36px) scaleY(2);
     opacity: 0;
   }
+}
+.full-wrap {
+  width: 50%;
+}
+.full-wrap .article-box.pf-welcome {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.full-wrap .article-box.pf-aboutme {
+  margin-bottom: 5rem !important;
+}
+.full-wrap .article-box.pf-aboutme .aboutme-wrap {
+  display: flex;
+  align-items: flex-start;
+}
+.full-wrap .article-box.pf-aboutme .aboutme-wrap .aboutme-text {
+  width: 70%;
+  margin-right: 2rem;
+  color: #ccd6f6;
+  font-size: 1.5rem;
+}
+.full-wrap .article-box.pf-aboutme .aboutme-wrap .aboutme-profile {
+  width: 30%;
+}
+.full-wrap .article-box.pf-aboutme .aboutme-wrap .aboutme-profile img {
+  width: 100%;
+}
+.full-wrap .article-box.pf-exprience {
+  margin-bottom: 5rem !important;
+  padding-bottom: 5rem;
+}
+.full-wrap .article-box.pf-exprience .exprience-list {
+  margin-bottom: 2rem;
+}
+.full-wrap .article-box.pf-exprience .exprience-list .list-nav {
+  color: #ccd6f6;
+  font-size: 1.2rem;
+}
+.full-wrap .article-box.pf-exprience .exprience-list .list-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.full-wrap .article-box.pf-exprience .exprience-list .list-nav ul li {
+  padding: 1rem 2rem;
+}
+.full-wrap .article-box.pf-exprience .exprience-list .list-nav ul li.active {
+  background-color: rgba(205, 208, 213, 0.12);
+  box-shadow: inset 0 -2px 0px 0px;
+}
+.full-wrap .article-box.pf-exprience .exprience-detail {
+  color: #ccd6f6;
+}
+.full-wrap .article-box.pf-exprience .exprience-detail .company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.full-wrap .article-box.pf-exprience .exprience-detail .company-date {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.full-wrap .article-box.pf-exprience .exprience-detail .company-detail {
+  margin-bottom: 2rem;
+}
+.full-wrap .article-box .article-title {
+  color: #c4cae0;
+  margin-bottom: 3rem !important;
+  font-weight: bold;
+}
+.full-wrap .article-box .article-title span {
+  color: #60f6d3;
+  font-size: 1.7rem;
+  font-weight: normal;
 }/*# sourceMappingURL=common.css.map */

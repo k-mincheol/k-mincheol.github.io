@@ -5,12 +5,14 @@ body {
     margin: 0;
     padding: 0;
     font-size: 14px;
+    // background-color: #0a192f;
+    background-color: #203b62;
 }
 
 @for $i from 1 through 6 {
     h#{$i} {
-        margin: 0!important;
-        padding: 0!important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 }
 
@@ -67,10 +69,14 @@ header {
     }
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .scroll-link {
     position: absolute;
     width: 1.5vw;
-    bottom: 2rem;
+    bottom: 10rem;
     transform: translate(-50%);
 
     .mouse {
@@ -99,5 +105,101 @@ header {
     100% {
         transform: translateY(36px) scaleY(2);
         opacity: 0;
+    }
+}
+
+.full-wrap {
+    width: 50%;
+
+    .article-box {
+        &.pf-welcome {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &.pf-aboutme {
+            margin-bottom: 5rem !important;
+
+            .aboutme-wrap {
+                display: flex;
+                align-items: flex-start;
+
+                .aboutme-text {
+                    width: 70%;
+                    margin-right: 2rem;
+                    color: #ccd6f6;
+                    font-size: 1.5rem;
+                }
+
+                .aboutme-profile {
+                    width: 30%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &.pf-exprience {
+            margin-bottom: 5rem !important;
+            padding-bottom: 5rem;
+
+            .exprience-list {
+                margin-bottom: 2rem;
+
+                .list-nav {
+                    color: #ccd6f6;
+                    font-size: 1.2rem;
+
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+
+                        li {
+                            padding: 1rem 2rem;
+
+                            &.active {
+                                background-color: rgb(205 208 213 / 12%);
+                                box-shadow: inset 0 -2px 0px 0px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .exprience-detail {
+                color: #ccd6f6;
+
+                .company-name {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin-bottom: 0.5rem;
+                }
+                .company-date {
+                    font-size: 1.1rem;
+                    margin-bottom: 0.5rem;
+                }
+                .company-detail {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        .article-title {
+            color: #c4cae0;
+            margin-bottom: 3rem !important;
+            font-weight: bold;
+
+            span {
+                color: #60f6d3;
+                font-size: 1.7rem;
+                font-weight: normal;
+            }
+        }
     }
 }
