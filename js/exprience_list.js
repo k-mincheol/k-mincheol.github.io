@@ -25,6 +25,13 @@ let exprienceDatas = [
                 "detail": "맞춤화장품 피부 테스트 사용자, 관리자페이지 프론트작업",
                 "use_skill": "html, css, javascript"
             },
+            {
+                "name": "펫마인드캠",
+                "url": "https://play.google.com/store/apps/details?id=com.pubbee.pmc&hl=ko&gl=US",
+                "described": "반려견 심리 / 정서 분석 앱",
+                "detail": "하이브리트 웹앱 사용자, 관리자페이지 프론트작업",
+                "use_skill": "html, css, javascript"
+            },
         ]
     },
     {

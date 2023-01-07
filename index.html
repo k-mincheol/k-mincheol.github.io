@@ -71,11 +71,11 @@
 
             <!-- 자기소개 -->
             <article class="article-box pf-aboutme">
-                <h2 class="article-title">
+                <h2 class="article-title" data-aos-delay="100" data-aos-duration="1000" data-aos="fade-up">
                     <span>01.</span>
                     자기소개
                 </h2>
-                <div class="aboutme-wrap">
+                <div class="aboutme-wrap" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up">
                     <div class="aboutme-text">
                         안녕하세요. ~~~~~~~~~~~~~~~~~~~~~~~~~~~
                     </div>
@@ -86,27 +86,29 @@
             </article>
 
             <article class="article-box pf-exprience">
-                <h2 class="article-title">
+                <h2 class="article-title" data-aos-delay="100" data-aos-duration="1000" data-aos="fade-up">
                     <span>02.</span>
                     경력 & 프로젝트
                 </h2>
-                <div class="exprience-list">
-                    <div class="list-nav">
-                        <ul>
-                            <li class="tab-item cursor-pointer active" data-id="0" onclick="tavClickEvt(this)">야근몬스터
-                            </li>
-                            <li class="tab-item cursor-pointer" data-id="1" onclick="tavClickEvt(this)">기원킹몬스터</li>
-                        </ul>
+                <div data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up">
+                    <div class="exprience-list">
+                        <div class="list-nav">
+                            <ul>
+                                <li class="tab-item cursor-pointer active" data-id="0" onclick="tavClickEvt(this)">야근몬스터
+                                </li>
+                                <li class="tab-item cursor-pointer" data-id="1" onclick="tavClickEvt(this)">기원킹몬스터</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="exprience-detail">
-                    <div class="company-name"></div>
-                    <div class="company-date">
-                        <div class="date"></div>
-                    </div>
-                    <div class="company-detail"></div>
-                    <div class="project-list">
-                        
+                    <div class="exprience-detail">
+                        <div class="company-name"></div>
+                        <div class="company-date">
+                            <div class="date"></div>
+                        </div>
+                        <div class="company-detail"></div>
+                        <div class="project-list">
+
+                        </div>
                     </div>
                 </div>
             </article>
@@ -150,7 +152,7 @@
                 }
             }
             elem.classList.add("active");
-            
+
             companyName.innerText = datas.name;
             date.innerText = datas.date;
             companyDetail.innerText = datas.detail;
