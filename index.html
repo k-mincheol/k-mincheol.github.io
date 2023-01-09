@@ -136,22 +136,27 @@
 
     <script>
         // 경력 & 프로젝트 탭 이벤트
-        function tavClickEvt(elem) {
+        var tavClickEvt = function(elem) {
+            console.log(elem);
             let tabElems = document.querySelectorAll(".tab-item");
-            let targetId = elem.getAttribute("data-id");
+            let targetId = elem == "init" ? 0 : elem.getAttribute("data-id");
             let datas = exprienceDatas[targetId];
             let companyName = document.querySelector(".company-name");
             let date = document.querySelector(".date");
             let companyDetail = document.querySelector(".company-detail");
             let projectListWrap = document.querySelector(".project-list");
 
+            // 처음 페이지 로딩이아님
             // 기존 active되어있는 탭 제거 후 클릭한 탭 active
-            for (let i = 0; i < tabElems.length; i++) {
-                if (tabElems[i].classList.contains("active")) {
-                    tabElems[i].classList.remove("active");
+            if(elem != "init") {
+                for (let i = 0; i < tabElems.length; i++) {
+                    if (tabElems[i].classList.contains("active")) {
+                        tabElems[i].classList.remove("active");
+                    }    
                 }
+                
+                elem.classList.add("active");
             }
-            elem.classList.add("active");
 
             companyName.innerText = datas.name;
             date.innerText = datas.date;
@@ -166,6 +171,8 @@
                 projectListWrap.innerHTML += projectElem;
             }
         }
+        
+        tavClickEvt("init")
 
         AOS.init();
     </script>
