@@ -27,28 +27,30 @@
 <body>
     <div id="wrap">
         <!-- header -->
-        <header class="w-100 position-fixed d-flex align-items-center justify-content-between">
-            <strong class="fs-24 text-white" data-aos-delay="0" data-aos="fade-down">Web Portfolio</strong>
+        <header class="w-100 position-fixed d-flex align-items-center justify-content-between" data-aos-delay="0"
+            data-aos="fade-down">
+            <strong class="logo-link" data-aos-delay="100" data-aos="fade-down">Web Portfolio</strong>
             <nav>
                 <ol class="d-flex align-items-center">
-                    <li data-aos-delay="100" data-aos="fade-down"><a  class="cursor-pointer" data-target="about_me" onclick="moveEvent(this)"><span>01.</span>
-                            <h6>소개</h6>
+                    <li class="nav-item active" data-aos-delay="150" data-aos="fade-down"><a class="cursor-pointer" data-target="main"
+                            onclick="moveEvent(this)"><span>01</span>
+                            <h5>Main</h5>
                         </a></li>
-                    <li data-aos-delay="250" data-aos="fade-down"><a class="cursor-pointer" data-target="exp_project" onclick="moveEvent(this)"><span>02.</span>
-                            <h6>경력 & 프로젝트</h6>
+                    <li class="nav-item" data-aos-delay="300" data-aos="fade-down"><a class="cursor-pointer" data-target="about"
+                            onclick="moveEvent(this)"><span>02</span>
+                            <h5>About</h5>
                         </a></li>
-                    <li data-aos-delay="400" data-aos="fade-down"><a class="cursor-pointer" data-target="license_edu" onclick="moveEvent(this)"><span>03.</span>
-                            <h6>자격증 및 교육</h6>
-                        </a></li>
-                    <li data-aos-delay="550" data-aos="fade-down"><a class="cursor-pointer" data-target="skill" onclick="moveEvent(this)"><span>04.</span>
-                            <h6>기술스택</h6>
+                    <li class="nav-item" data-aos-delay="450" data-aos="fade-down"><a class="cursor-pointer" data-target="exp_pro"
+                            onclick="moveEvent(this)"><span>03</span>
+                            <h5>Experience & Project</h5>
                         </a></li>
                 </ol>
             </nav>
         </header>
 
         <section class="full-wrap h-100 m-auto">
-            <article class="article-box text-center pf-welcome" style="min-height: 100vh;">
+            <!-- Main -->
+            <article class="article-box text-center pf-main" style="min-height: 100vh;">
                 <div>
                     <h1 class="intro-text font-weight-bold text-white mb-2" data-aos-delay="500" data-aos="fade-up">
                         <span>안녕하세요!</span>
@@ -68,10 +70,49 @@
                         </g>
                     </svg>
                 </a>
+
+                <!-- 소개 -->
+                <ol class="main-intro-list">
+                    <li class="main-intro-item">
+                        <span class="main-intro-number">01.</span>
+                        <strong class="main-intro-title">skills</strong>
+                        <ul class="main-intro-sub-list">
+                            <li class="main-intro-sub-item">HTML, CSS, SCSS, javascript</li>
+                            <li class="main-intro-sub-item">photoshop, illustrator</li>
+                        </ul>
+                    </li>
+                    <li class="main-intro-item">
+                        <span class="main-intro-number">02.</span>
+                        <strong class="main-intro-title">experience</strong>
+                        <ul class="main-intro-sub-list">
+                            <li class="main-intro-sub-item">야근몬스터(프론트엔드 개발)</li>
+                        </ul>
+                    </li>
+                    <li class="main-intro-item">
+                        <span class="main-intro-number">03.</span>
+                        <strong class="main-intro-title">license</strong>
+                        <ul class="main-intro-sub-list">
+                            <li class="main-intro-sub-item">GTQ 1급</li>
+                            <li class="main-intro-sub-item">정보처리기사(필기)</li>
+                            <li class="main-intro-sub-item">웹디자인기능사(필기)</li>
+                            <li class="main-intro-sub-item">ATC1, 2급</li>
+                            <li class="main-intro-sub-item">운전면서(2종보통)</li>
+                        </ul>
+                    </li>
+                    <li class="main-intro-item">
+                        <span class="main-intro-number">04.</span>
+                        <strong class="main-intro-title">education</strong>
+                        <ul class="main-intro-sub-list">
+                            <li class="main-intro-sub-item">패스트 캠퍼스 (Web 개발 취업 스쿨 1학기)</li>
+                            <li class="main-intro-sub-item">하이미디어 아카데미 (웹퍼블리셔반)</li>
+                            <li class="main-intro-sub-item">가천대학교 (시각디자인과)</li>
+                        </ul>
+                    </li>
+                </ol>
             </article>
 
-            <!-- 자기소개 -->
-            <article class="article-box pf-aboutme" id="about_me">
+            <!-- 01. 자기소개 -->
+            <article class="article-box pf-aboutme" id="main">
                 <h2 class="article-title" data-aos-delay="100" data-aos-duration="1000" data-aos="fade-up">
                     <span>01.</span>
                     자기소개
@@ -86,7 +127,8 @@
                 </div>
             </article>
 
-            <article class="article-box pf-exprience" id="exp_project">
+            <!-- 02. 경력 & 프로젝트 -->
+            <article class="article-box pf-exprience" id="about">
                 <h2 class="article-title" data-aos-delay="100" data-aos-duration="1000" data-aos="fade-up">
                     <span>02.</span>
                     경력 & 프로젝트
@@ -110,6 +152,20 @@
                         <div class="project-list">
 
                         </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 03. 자격증 & 교육 -->
+            <article class="article-box pf-license-edu" id="exp_pro">
+                <h2 class="article-title" data-aos-delay="100" data-aos-duration="1000" data-aos="fade-up">
+                    <span>03.</span>
+                    자격증 및 교육
+                </h2>
+                <div class="license-edu-wrap" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up">
+                    <div class="license-edu-text">
+                        안녕하세요. ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        ascasc
                     </div>
                 </div>
             </article>

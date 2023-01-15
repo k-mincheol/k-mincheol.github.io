@@ -6,7 +6,6 @@ body {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  background-color: #0a192f;
 }
 
 h1 {
@@ -54,24 +53,45 @@ li {
 
 header {
   position: absolute;
-  height: 5rem;
-  padding: 0 5%;
+  height: 6rem;
+  padding: 0 2%;
   box-sizing: border-box;
   z-index: 999;
-  background-color: rgba(10, 25, 47, 0.7);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #ccc;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+header .logo-link {
+  font-size: 2.5rem;
+}
+header ol li {
+  margin-right: 2rem;
 }
 header ol li a {
   display: flex;
-  align-items: baseline;
+  flex-flow: column;
   color: #60f6d3;
-  padding: 0 1rem;
 }
 header ol li a span {
-  margin-right: 0.5rem;
-  color: #60f6d3;
+  font-weight: lighter;
 }
-header ol li a h6 {
-  color: #ccd6f6;
+header ol li a h5 {
+  font-weight: 400;
+}
+header ol li a h5:after {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  transition: width 0.4s;
+  content: "";
+}
+header ol li a h5 .active .header_nav_link .header_nav_text:after {
+  width: 100%;
 }
 
 #wrap {
@@ -193,7 +213,7 @@ header ol li a h6 {
 .full-wrap {
   width: 50%;
 }
-.full-wrap .article-box.pf-welcome {
+.full-wrap .article-box.pf-main {
   width: 100%;
   height: 100%;
   display: flex;
