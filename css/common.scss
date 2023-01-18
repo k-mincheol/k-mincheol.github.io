@@ -92,6 +92,13 @@ header {
     display: none!important;
 }
 
+.verticle-line {
+    border: 0;
+    border-right: 1px solid rgba(0,0,0,.1);
+    width: 1px;
+    margin: 0 2rem;
+}
+
 // 폰트 사이즈
 @for $i from 10 to 25 {
     .fs-#{$i} {
@@ -227,20 +234,36 @@ header {
                         // align-items: center;
                         // height: 2.5rem;
 
-                        .skill-text {
-                            font-size: 1.2rem;
+                        .skills-wrap {
+                            .skill-elem {
+                                margin-right: 1.5rem;
+                                text-align: center;
+
+                                img {
+                                    height: 50px;
+                                    margin-bottom: 0.5rem;
+                                }
+
+                                &:hover {
+                                    filter: drop-shadow(5px 5px 5px #000);
+                                    transition: 0.2s;
+                                    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                                    color: white;
+                                }
+                            }
                         }
 
                         .get-date {
                             font-size: 1.2rem;
                             color: rgb(159 98 98);
+                            display: inline-block;
                         }
 
                         .get-name {
                             font-size: 1.2rem;
                             font-weight: bold;
                             margin: 0.2rem 0 0.5rem 1rem;
-                            display: inline-block;
+                            display: block;
                         }
                     }
 
@@ -366,6 +389,8 @@ header {
         }
 
         .article-title {
+            transition: all .4s;
+
             color: #fff;
             margin-bottom: 3rem !important;
             font-weight: bold;
@@ -376,6 +401,11 @@ header {
                 // color: #60f6d3;
                 font-size: 2rem;
                 font-weight: normal;
+            }
+
+            &:hover {
+                color: #000;
+                transition: all .4s;
             }
         }
     }
