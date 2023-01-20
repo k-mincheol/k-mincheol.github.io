@@ -18,7 +18,7 @@ body {
 
 a {
     text-decoration: none !important;
-    color: inherit!important;
+    color: inherit !important;
 }
 
 hr {
@@ -43,7 +43,7 @@ header {
     border-bottom: 1px solid #ccc;
     backdrop-filter: blur(5px);
     // background-color: rgba(10, 25, 47, 0.7);
-    
+
     .logo-link {
         font-size: 2.5rem;
     }
@@ -77,12 +77,12 @@ header {
 }
 
 .hidden {
-    display: none!important;
+    display: none !important;
 }
 
 .verticle-line {
     border: 0;
-    border-right: 1px solid rgba(0,0,0,.1);
+    border-right: 1px solid rgba(0, 0, 0, .1);
     width: 1px;
     margin: 0 2rem;
 }
@@ -146,7 +146,7 @@ header {
         }
 
         &.pf-intro {
-            width: 80%;
+            width: 70%;
             margin: 0 auto;
             padding: 0 0 10rem 0;
 
@@ -157,9 +157,10 @@ header {
                     flex: 1;
 
                     &:hover {
-                    //    .main-intro-number {
-                    //         color: #000;
-                    //     }
+
+                        //    .main-intro-number {
+                        //         color: #000;
+                        //     }
                         .main-intro-title {
                             text-shadow: 3px 3px 7px #000;
                             color: #000;
@@ -210,25 +211,25 @@ header {
                 justify-content: space-between;
 
                 .mobile-photo {
-                        .photo-back {
-                            position: absolute;
-                            top: 0;
-                            width: 270px;
-                            border: 1px solid #000;
-                            height: 350px;
-                            box-shadow: 2px 2px 9px;
-                            transform: rotate(5deg);
-                            z-index: 9;
-                            opacity: 0.5;
-                        }
-
-                        .id-photo {
-                            position: relative;
-                            width: 100%;
-                            z-index: 10;
-                            box-shadow: 2px 2px 9px;
-                        }
+                    .photo-back {
+                        position: absolute;
+                        top: 0;
+                        width: 270px;
+                        border: 1px solid #000;
+                        height: 350px;
+                        box-shadow: 2px 2px 9px;
+                        transform: rotate(5deg);
+                        z-index: 9;
+                        opacity: 0.5;
                     }
+
+                    .id-photo {
+                        position: relative;
+                        width: 100%;
+                        z-index: 10;
+                        box-shadow: 2px 2px 9px;
+                    }
+                }
 
                 .aboutme-text {
                     width: 70%;
@@ -349,14 +350,16 @@ header {
                     font-weight: bold;
                     margin-bottom: 0.5rem;
                 }
+
                 .company-date {
                     font-size: 1.1rem;
                     margin-bottom: 0.5rem;
                 }
+
                 .company-detail {
                     margin-bottom: 2rem;
                 }
-                
+
                 // .project-list {
                 //     display: grid;
                 //     grid-template-columns: repeat(2, 1fr);
@@ -370,18 +373,18 @@ header {
                     font-size: 1rem;
                     transition: 0.4s;
                 }
-                
+
                 .active,
                 .accordion:hover {
                     // color: #fff;
                     // font-weight: bold;
                 }
-                
+
                 .accordion:before {
                     content: '\002B';
                     // color: #ccd6f6;
                 }
-                
+
                 .active:before {
                     content: "\2212";
                 }
@@ -392,11 +395,16 @@ header {
                     max-height: 0;
                     overflow: hidden;
                     transition: max-height 0.2s ease-out;
+                    
+                    // border: 1px solid;
+                    border-radius: 5px;
+                    box-shadow: 2px 2px 7px -1px;
 
                     div {
                         padding: 0.5rem 0;
                     }
                 }
+
                 // 아코디언끝
             }
         }

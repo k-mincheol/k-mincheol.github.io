@@ -217,7 +217,7 @@ header ol .nav-item a .nav-text {
   justify-content: center;
 }
 .full-wrap .article-box.pf-intro {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   padding: 0 0 10rem 0;
 }
@@ -399,6 +399,8 @@ header ol .nav-item a .nav-text {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px -1px;
 }
 .full-wrap .article-box.pf-exprience .exprience-detail .panel div {
   padding: 0.5rem 0;
