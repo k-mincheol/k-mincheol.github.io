@@ -257,25 +257,27 @@
                     </div>
                 </h2>
                 <div class="exprience-wrap" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up">
-                    <div class="exprience-list">
+                    <!-- <div class="exprience-list">
                         <div class="list-nav">
                             <ul>
                                 <li class="tab-item cursor-pointer active" data-id="0" onclick="tavClickEvt(this)">야근몬스터
                                 </li>
-                                <!-- <li class="tab-item cursor-pointer" data-id="1" onclick="tavClickEvt(this)"></li> -->
                             </ul>
                         </div>
-                    </div>
-                    <div class="exprience-detail">
-                        <div class="company-name"></div>
+                    </div> -->
+                    <!-- <div class="exprience-detail">
                         <div class="company-date">
                             <div class="date"></div>
                         </div>
-                        <div class="company-detail"></div>
-                        <div class="project-list">
-
+                        <div class="company-info">
+                            <div class="company-name"></div>
+                            <div class="company-detail"></div>
                         </div>
-                    </div>
+                        <div class="company-descript"></div>
+                        <div class="project-list">
+                    
+                        </div>
+                    </div> -->
                 </div>
             </article>
         </section>
@@ -289,6 +291,29 @@
 
     <!-- aos -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- 경력(회사) 정보 -->
+    <script type="text/html" id="company-elem">
+        <div class="exprience-detail">
+            <div class="company-date">
+                <div class="date">{{COMPANY_DATE}}</div>
+            </div>
+            <div class="company-info">
+                <div class="company-name">{{COMPANY_NAME}}</div>
+                <div class="company-detail">{{COMPANY_DETAIL}}</div>
+            </div>
+            <div class="company-descript">{{COMPANY_DESCRIPT}}</div>
+            <div class="skills-tools"><font size="3" color="#b34831">[사용기술 & 협업툴]</font> {{SKILL_TOOL}}</div>
+            <div class="accordion project-elem cursor-pointer company-{{COMPANY_ID}}" data-id="{{COMPANY_ID}}">
+                <span class="project-name mx-2">View Project</span>
+            </div>
+            <div class="panel">
+                <div class="project-list">
+        123123123
+                </div>
+            </div>
+        </div>
+    </script>
 
     <!-- 프로젝트 리스트 elem -->
     <script type="text/html" id="project-elem">
@@ -310,43 +335,62 @@
     <script>
         // 경력 & 프로젝트 탭 이벤트
         var tavClickEvt = function (elem) {
-            let tabElems = document.querySelectorAll(".tab-item");
-            let targetId = elem == "init" ? 0 : elem.getAttribute("data-id");
-            let datas = exprienceDatas[targetId];
-            let companyName = document.querySelector(".company-name");
-            let date = document.querySelector(".date");
-            let companyDetail = document.querySelector(".company-detail");
-            let projectListWrap = document.querySelector(".project-list");
 
-            // 처음 페이지 로딩이아님
-            // 기존 active되어있는 탭 제거 후 클릭한 탭 active
-            if (elem != "init") {
-                for (let i = 0; i < tabElems.length; i++) {
-                    if (tabElems[i].classList.contains("active")) {
-                        tabElems[i].classList.remove("active");
-                    }
-                }
-
-                elem.classList.add("active");
+            // 회사정보입력
+            let experienceWrap = document.querySelector(".exprience-wrap");
+            for (let i = 0; i < exprienceDatas.length; i++) {
+                companyElemHtml = document.getElementById('company-elem').innerHTML;
+                companyElemHtml = companyElemHtml.replaceAll(/{{COMPANY_DATE}}/gi, exprienceDatas[i].date);
+                companyElemHtml = companyElemHtml.replaceAll(/{{COMPANY_NAME}}/gi, exprienceDatas[i].name);
+                companyElemHtml = companyElemHtml.replaceAll(/{{COMPANY_DETAIL}}/gi, exprienceDatas[i].detail);
+                companyElemHtml = companyElemHtml.replaceAll(/{{SKILL_TOOL}}/gi, exprienceDatas[i].skills);
+                companyElemHtml = companyElemHtml.replaceAll(/{{COMPANY_DESCRIPT}}/gi, exprienceDatas[i].description);
+                companyElemHtml = companyElemHtml.replaceAll(/{{COMPANY_ID}}/gi, exprienceDatas[i].id);
+                experienceWrap.innerHTML += companyElemHtml;
             }
 
-            companyName.innerText = datas.name;
-            date.innerText = datas.date;
-            companyDetail.innerText = datas.detail;
 
-            // 프로젝트 리스트 초기화
-            projectListWrap.innerHTML = "";
-            // 프로젝트 리스트 추가
-            for (let i = 0; i < datas.project_list.length; i++) {
-                projectElem = document.getElementById('project-elem').innerHTML;
-                projectElem = projectElem.replaceAll(/{{NAME}}/gi, datas.project_list[i].name);
-                projectElem = projectElem.replaceAll(/{{LINK}}/gi, datas.project_list[i].url);
-                projectElem = projectElem.replaceAll(/{{IS_VIEW}}/gi, datas.project_list[i].url.length > 0 ? '' : 'hidden');
-                projectElem = projectElem.replaceAll(/{{DESCRIBED}}/gi, datas.project_list[i].described);
-                projectElem = projectElem.replaceAll(/{{DETAIL}}/gi, datas.project_list[i].detail);
-                projectElem = projectElem.replaceAll(/{{USE_SKILL}}/gi, datas.project_list[i].use_skill);
-                projectListWrap.innerHTML += projectElem;
-            }
+            // let tabElems = document.querySelectorAll(".tab-item");
+            // let targetId = elem == "init" ? 0 : elem.getAttribute("data-id");
+            // let datas = exprienceDatas[targetId];
+            // let companyName = document.querySelector(".company-name");
+            // let date = document.querySelector(".date");
+            // let companyDetail = document.querySelector(".company-detail");
+            // let companyDescript = document.querySelector(".company-descript");
+            // let projectListWrap = document.querySelector(".project-list");
+
+            // // 처음 페이지 로딩이아님
+            // // 기존 active되어있는 탭 제거 후 클릭한 탭 active
+            // if (elem != "init") {
+            //     for (let i = 0; i < tabElems.length; i++) {
+            //         if (tabElems[i].classList.contains("active")) {
+            //             tabElems[i].classList.remove("active");
+            //         }
+            //     }
+
+            //     elem.classList.add("active");
+            // }
+
+
+
+            // companyName.innerText = datas.name;
+            // date.innerText = datas.date;
+            // companyDetail.innerText = datas.detail;
+            // companyDescript.innerText = datas.description;
+
+            // // 프로젝트 리스트 초기화
+            // projectListWrap.innerHTML = "";
+            // // 프로젝트 리스트 추가
+            // for (let i = 0; i < datas.project_list.length; i++) {
+            //     projectElem = document.getElementById('project-elem').innerHTML;
+            //     projectElem = projectElem.replaceAll(/{{NAME}}/gi, datas.project_list[i].name);
+            //     projectElem = projectElem.replaceAll(/{{LINK}}/gi, datas.project_list[i].url);
+            //     projectElem = projectElem.replaceAll(/{{IS_VIEW}}/gi, datas.project_list[i].url.length > 0 ? '' : 'hidden');
+            //     projectElem = projectElem.replaceAll(/{{DESCRIBED}}/gi, datas.project_list[i].described);
+            //     projectElem = projectElem.replaceAll(/{{DETAIL}}/gi, datas.project_list[i].detail);
+            //     projectElem = projectElem.replaceAll(/{{USE_SKILL}}/gi, datas.project_list[i].use_skill);
+            //     projectListWrap.innerHTML += projectElem;
+            // }
 
             // 아코디언 추가
             let accElems = document.querySelectorAll(".accordion");

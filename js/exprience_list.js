@@ -1,8 +1,11 @@
 let exprienceDatas = [
     {
+        "id": 1,
         "name": "야근몬스터",
         "date": "2019.08 ~ 2022.09",
         "detail": "SI(System Integration), SM(System Management)",
+        "description": "Xd, Zeplin 으로 받은 디자인을 받아 퍼블리싱 & 프론트엔드 작업 진행하였습니다.",
+        "skills": "Html · css · javascript · Git · Xd · Zeplin · Microsoft teams · slack · trello · vscode",
         "project_list": [
             {
                 "name": "스스므",
@@ -72,9 +75,12 @@ let exprienceDatas = [
         ]
     },
     {
+        "id": 2,
         "name": "기원킹몬스터",
         "date": "2022.09 ~ 2023.01",
         "detail": "SI(System Integration), SM(System Management)",
+        "description": "Xd, Zeplin 으로 받은 디자인을 받아 퍼블리싱 & 프론트엔드 작업 진행하였습니다.",
+        "skills": "Html · css · javascript · Git · Xd · Zeplin · Microsoft teams · slack · trello · vscode",
         "project_list": [
             {
                 "name": "기원킹킹킹",
