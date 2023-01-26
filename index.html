@@ -51,6 +51,7 @@
         <section class="full-wrap h-100 m-auto">
             <!-- Main -->
             <article id="main" class="article-box text-center pf-main" style="min-height: 100vh;">
+                <!-- 저는 웹사이트를 더욱 실용적이며 즐겁게 사용할 수 있도록 만드는 목표를 가지고 있는 -->
                 <div>
                     <h1 class="intro-text font-weight-bold mb-2" data-aos-delay="500" data-aos="fade-up">
                         <span>안녕하세요!</span>
@@ -76,7 +77,7 @@
                 <!-- 소개 -->
                 <ol class="main-intro-list">
                     <li class="main-intro-item" data-aos-delay="100" data-aos-duration="1000" data-aos="fade-up">
-                        <!-- <span class="main-intro-number">01.</span> -->
+                        <span class="main-intro-number">01.</span>
                         <strong class="main-intro-title">skills</strong>
                         <ul class="main-intro-sub-list">
                             <li class="main-intro-sub-item">- Html, Css, Scss, Javascript, Git</li>
@@ -85,14 +86,14 @@
                         </ul>
                     </li>
                     <li class="main-intro-item" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up">
-                        <!-- <span class="main-intro-number">02.</span> -->
+                        <span class="main-intro-number">02.</span>
                         <strong class="main-intro-title">experience</strong>
                         <ul class="main-intro-sub-list">
                             <li class="main-intro-sub-item">- 야근몬스터 (프론트엔드)</li>
                         </ul>
                     </li>
                     <li class="main-intro-item" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-up">
-                        <!-- <span class="main-intro-number">03.</span> -->
+                        <span class="main-intro-number">03.</span>
                         <strong class="main-intro-title">license</strong>
                         <ul class="main-intro-sub-list">
                             <li class="main-intro-sub-item">- GTQ 1급</li>
@@ -104,7 +105,7 @@
                         </ul>
                     </li>
                     <li class="main-intro-item" data-aos-delay="400" data-aos-duration="1000" data-aos="fade-up">
-                        <!-- <span class="main-intro-number">04.</span> -->
+                        <span class="main-intro-number">04.</span>
                         <strong class="main-intro-title">education</strong>
                         <ul class="main-intro-sub-list">
                             <li class="main-intro-sub-item">- 라인컴퓨터아트 (인테리어디자인)</li>
@@ -235,7 +236,7 @@
                                     <span class="get-name">> 빠른설계를위한 AutoCad</span>
                                     <div class="get-date">2019. 01 ~ 2019. 07</div>
                                     <font size="2" color="gray">(비트캠프)</font>
-                                    <span class="get-name">> UI/UX엔지니어링 및 응용 sw엔지니어링 양성과정</span>
+                                    <span class="get-name">> UI/UX엔지니어링 및 응용 SW엔지니어링 양성과정</span>
                                     <div class="get-date">2013. 03 ~ 2019. 02</div>
                                     <span class="get-name">> 한국산업기술대학교(현 한국공학대학교) 학사</span>
                                     <div class="get-date">2010. 03 ~ 2013. 02</div>
@@ -292,7 +293,9 @@
     <!-- aos -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- 경력(회사) 정보 -->
+    <script src="./js/exprience_list.js"></script>
+
+    <!-- 경력(회사) / 프로젝트 elem-->
     <script type="text/html" id="company-elem">
         <div class="exprience-detail">
             <div class="company-date">
@@ -305,98 +308,71 @@
             <div class="company-descript">{{COMPANY_DESCRIPT}}</div>
             <div class="skills-tools"><font size="3" color="#b34831">[사용기술 & 협업툴]</font> {{SKILL_TOOL}}</div>
             <div class="accordion project-elem cursor-pointer company-{{COMPANY_ID}}" data-id="{{COMPANY_ID}}">
-                <span class="project-name mx-2">View Project</span>
+                View Project
             </div>
-            <div class="panel">
-                <div class="project-list">
-        123123123
-                </div>
+            <div class="panel panel-{{ID}}">
+                
             </div>
         </div>
     </script>
 
-    <!-- 프로젝트 리스트 elem -->
-    <script type="text/html" id="project-elem">
-        <div>
-        <div class="accordion project-elem d-flex align-items-center cursor-pointer">
-            <span class="project-name mx-2">{{NAME}}</span>
-            <a class="project-link {{IS_VIEW}}" href="{{LINK}}" target="_blank"><i class="ri-external-link-fill"></i></a>
-        </div>
-        <div class="panel">
+    <script type="text/html" id="panel-elem">
+        <div class="project-list" data-aos-delay="100" data-aos-duration="1000" data-aos="fade-left">
+            <div class=" project-name">
+                <div class="pb-0">{{NAME}}</div>
+                <div class="m-0 p-0">
+                    <a class="project-link user-link {{IS_VIEW}}" href="{{LINK}}" target="_blank">사용자<i class="ri-external-link-fill"></i></a>
+                    <a class="project-link admin-link {{IS_ADMIN_VIEW}}" href="{{ADMIN_LINK}}" target="_blank">관리자<i class="ri-external-link-fill"></i></a>
+                </div>
+            </div>
             <div class="d-flex align-items-start"><i class="ri-arrow-right-s-fill"></i>{{DESCRIBED}}</div>
             <div class="d-flex align-items-start"><i class="ri-arrow-right-s-fill"></i>{{DETAIL}}</div>
             <div class="d-flex align-items-center justify-content-end">{{USE_SKILL}}</div>
         </div>
-    </div>
+        <hr class="p-0 m-0">
     </script>
 
-    <script src="./js/exprience_list.js"></script>
-
     <script>
-        // 경력 & 프로젝트 탭 이벤트
-        var tavClickEvt = function (elem) {
+        // 경력 & 프로젝트 초기화 event
+        var initExprience = function (elem) {
 
             // 회사정보입력
             let experienceWrap = document.querySelector(".exprience-wrap");
             for (let i = 0; i < exprienceDatas.length; i++) {
-                companyElemHtml = document.getElementById('company-elem').innerHTML;
+                companyElemHtml = document.getElementById("company-elem").innerHTML;
                 companyElemHtml = companyElemHtml.replaceAll(/{{COMPANY_DATE}}/gi, exprienceDatas[i].date);
                 companyElemHtml = companyElemHtml.replaceAll(/{{COMPANY_NAME}}/gi, exprienceDatas[i].name);
                 companyElemHtml = companyElemHtml.replaceAll(/{{COMPANY_DETAIL}}/gi, exprienceDatas[i].detail);
                 companyElemHtml = companyElemHtml.replaceAll(/{{SKILL_TOOL}}/gi, exprienceDatas[i].skills);
                 companyElemHtml = companyElemHtml.replaceAll(/{{COMPANY_DESCRIPT}}/gi, exprienceDatas[i].description);
                 companyElemHtml = companyElemHtml.replaceAll(/{{COMPANY_ID}}/gi, exprienceDatas[i].id);
+                companyElemHtml = companyElemHtml.replaceAll(/{{ID}}/gi, exprienceDatas[i].id);
+
                 experienceWrap.innerHTML += companyElemHtml;
+
+                // 프로젝트리스트 추가
+                let panelWrap = document.querySelector(".panel-" + exprienceDatas[i].id);
+                let projectDatas = exprienceDatas[i].project_list;
+                for (let j = 0; j < projectDatas.length; j++) {
+                    panelElemHtml = document.getElementById("panel-elem").innerHTML;
+                    panelElemHtml = panelElemHtml.replaceAll(/{{NAME}}/gi, projectDatas[j].name);
+                    panelElemHtml = panelElemHtml.replaceAll(/{{LINK}}/gi, projectDatas[j].url);
+                    panelElemHtml = panelElemHtml.replaceAll(/{{IS_VIEW}}/gi, projectDatas[j].url == '' ? 'hidden' : '');
+                    panelElemHtml = panelElemHtml.replaceAll(/{{ADMIN_LINK}}/gi, projectDatas[j].admin_url);
+                    panelElemHtml = panelElemHtml.replaceAll(/{{IS_ADMIN_VIEW}}/gi, projectDatas[j].admin_url == '' ? 'hidden' : '');
+                    panelElemHtml = panelElemHtml.replaceAll(/{{DESCRIBED}}/gi, projectDatas[j].described);
+                    panelElemHtml = panelElemHtml.replaceAll(/{{DETAIL}}/gi, projectDatas[j].detail);
+                    panelElemHtml = panelElemHtml.replaceAll(/{{USE_SKILL}}/gi, projectDatas[j].use_skill);
+
+                    panelWrap.innerHTML += panelElemHtml;
+                }
             }
 
 
-            // let tabElems = document.querySelectorAll(".tab-item");
-            // let targetId = elem == "init" ? 0 : elem.getAttribute("data-id");
-            // let datas = exprienceDatas[targetId];
-            // let companyName = document.querySelector(".company-name");
-            // let date = document.querySelector(".date");
-            // let companyDetail = document.querySelector(".company-detail");
-            // let companyDescript = document.querySelector(".company-descript");
-            // let projectListWrap = document.querySelector(".project-list");
-
-            // // 처음 페이지 로딩이아님
-            // // 기존 active되어있는 탭 제거 후 클릭한 탭 active
-            // if (elem != "init") {
-            //     for (let i = 0; i < tabElems.length; i++) {
-            //         if (tabElems[i].classList.contains("active")) {
-            //             tabElems[i].classList.remove("active");
-            //         }
-            //     }
-
-            //     elem.classList.add("active");
-            // }
-
-
-
-            // companyName.innerText = datas.name;
-            // date.innerText = datas.date;
-            // companyDetail.innerText = datas.detail;
-            // companyDescript.innerText = datas.description;
-
-            // // 프로젝트 리스트 초기화
-            // projectListWrap.innerHTML = "";
-            // // 프로젝트 리스트 추가
-            // for (let i = 0; i < datas.project_list.length; i++) {
-            //     projectElem = document.getElementById('project-elem').innerHTML;
-            //     projectElem = projectElem.replaceAll(/{{NAME}}/gi, datas.project_list[i].name);
-            //     projectElem = projectElem.replaceAll(/{{LINK}}/gi, datas.project_list[i].url);
-            //     projectElem = projectElem.replaceAll(/{{IS_VIEW}}/gi, datas.project_list[i].url.length > 0 ? '' : 'hidden');
-            //     projectElem = projectElem.replaceAll(/{{DESCRIBED}}/gi, datas.project_list[i].described);
-            //     projectElem = projectElem.replaceAll(/{{DETAIL}}/gi, datas.project_list[i].detail);
-            //     projectElem = projectElem.replaceAll(/{{USE_SKILL}}/gi, datas.project_list[i].use_skill);
-            //     projectListWrap.innerHTML += projectElem;
-            // }
 
             // 아코디언 추가
             let accElems = document.querySelectorAll(".accordion");
-            let i;
-
-            for (i = 0; i < accElems.length; i++) {
+            for (let i = 0; i < accElems.length; i++) {
                 accElems[i].addEventListener("click", function () {
                     this.classList.toggle("active");
                     let panel = this.nextElementSibling;
@@ -416,7 +392,7 @@
         }
 
         // 처음 페이지 로딩 시 경력사항 초기화
-        tavClickEvt("init");
+        initExprience("init");
 
         $("#accordion").accordion();
 

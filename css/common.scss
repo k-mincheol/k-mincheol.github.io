@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Do+Hyeon&family=Dongle&family=Gothic+A1&family=Gowun+Dodum&family=IBM+Plex+Sans+KR&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR&family=Stylish&family=Sunflower:wght@500&display=swap');
+
 html,
 body {
     width: 100%;
@@ -5,8 +7,8 @@ body {
     margin: 0;
     padding: 0;
     font-size: 14px;
-    // background-color: #0a192f;
-    // background-color: #203b62;
+    // font-family: "Do Hyeon", sans-serif;
+    font-family: "Jua", sans-serif;
 }
 
 @for $i from 1 through 6 {
@@ -42,7 +44,6 @@ header {
     background-color: rgb(255 255 255 / 20%);
     border-bottom: 1px solid #ccc;
     backdrop-filter: blur(5px);
-    // background-color: rgba(10, 25, 47, 0.7);
 
     .logo-link {
         font-size: 2.5rem;
@@ -74,6 +75,11 @@ header {
 #wrap {
     width: 100%;
     height: 100%;
+    background-image: url("../image/back.jpg");
+    /* overflow: hidden; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hidden {
@@ -134,8 +140,6 @@ header {
 }
 
 .full-wrap {
-    // width: 50%;
-
     .article-box {
         &.pf-main {
             width: 100%;
@@ -143,12 +147,13 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
+            color: white;
         }
 
         &.pf-intro {
             width: 70%;
             margin: 0 auto;
-            padding: 0 0 10rem 0;
+            padding: 10rem 0;
 
             .main-intro-list {
                 display: flex;
@@ -157,20 +162,15 @@ header {
                     flex: 1;
 
                     &:hover {
-
-                        //    .main-intro-number {
-                        //         color: #000;
-                        //     }
                         .main-intro-title {
-                            text-shadow: 3px 3px 7px #000;
+                            // text-shadow: 3px 3px 7px #000;
                             color: #000;
                         }
-                    }
 
-                    // .main-intro-title {
-                    //     text-transform: uppercase;
-                    //     font-size: 1.5rem;
-                    // }
+                        .main-intro-number {
+                            color: #fff;
+                        }
+                    }
 
                     .main-intro-sub-list {
                         margin-top: 0.8rem;
@@ -182,12 +182,21 @@ header {
                         }
                     }
 
-                    // .main-intro-number,
+                    .main-intro-number {
+                        font-size: 4.5rem;
+                        font-weight: bold;
+                        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                        position: absolute;
+                        top: -45px;
+                        left: -35px;
+                        z-index: -10;
+                        transition: all .2s;
+                    }
+
                     .main-intro-title {
                         text-transform: uppercase;
                         font-size: 2.5rem;
                         display: block;
-                        // font-size: 4.5rem;
                         font-weight: bold;
                         color: #fff;
                         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -233,18 +242,12 @@ header {
 
                 .aboutme-text {
                     width: 70%;
-                    // margin-right: 2rem;
-                    // color: #ccd6f6;
                     font-size: 1.5rem;
 
                     .info,
                     .skills,
                     .license,
                     .education {
-                        // display: flex;
-                        // align-items: center;
-                        // height: 2.5rem;
-
                         .skills-wrap {
                             .skill-elem {
                                 margin-right: 1.5rem;
@@ -279,9 +282,8 @@ header {
                     }
 
                     .tag {
-                        // display: inline-block;
                         border: 1px solid #8f8f8f;
-                        // background-color: rgb(0 128 0 / 60%);
+                        border-radius: 5px;
                         color: #000;
                         font-size: 1.2rem;
                         margin-right: 1rem;
@@ -321,7 +323,6 @@ header {
                 margin-bottom: 2rem;
 
                 .list-nav {
-                    // color: #ccd6f6;
                     font-size: 1.2rem;
 
                     ul {
@@ -343,8 +344,9 @@ header {
             }
 
             .exprience-detail {
-                // color: #ccd6f6;
                 margin-bottom: 2rem;
+                border-left: 5px solid green;
+                padding-left: 1rem;
 
                 .company-date {
                     margin-bottom: 0.5rem;
@@ -380,31 +382,48 @@ header {
 
                 .skills-tools {
                     font-size: 1.1rem;
+                    margin-bottom: 0.3rem;
                 }
 
-                // .project-list {
-                //     display: grid;
-                //     grid-template-columns: repeat(2, 1fr);
-                //     gap: 0.5rem;
-                // }
+                .project-list {
+                    .project-name {
+                        font-size: 1.3rem;
+                    }
+
+                    .project-link {
+                        margin-left: 0.3rem;
+                        font-size: 1rem;
+                        color: white!important;
+                        border-radius: 5px;
+                        padding: 0 0.2rem;
+
+                        &.user-link {
+                            background-color: rgb(0 128 0 / 60%);
+                        }
+
+                        &.admin-link {
+                            background-color: rgb(255 0 0 / 60%);
+                        }
+                    }
+                }
 
                 // 아코디언
                 .accordion {
+                    display: inline;
                     margin: 1rem 0 1.3rem 0;
                     width: 100%;
                     font-size: 1rem;
-                    transition: 0.4s;
+                    transition: 0.2s;
                 }
 
                 .active,
                 .accordion:hover {
-                    // color: #fff;
-                    // font-weight: bold;
+                    color: black;
+                    font-weight: bold;
                 }
 
                 .accordion:before {
                     content: '\002B';
-                    // color: #ccd6f6;
                 }
 
                 .active:before {
@@ -413,20 +432,14 @@ header {
 
                 .panel {
                     padding: 0 1rem;
-                    // background-color: rgb(255 0 88 / 11%);
                     max-height: 0;
                     overflow: hidden;
                     transition: max-height 0.2s ease-out;
-                    
-                    // border: 1px solid;
-                    // border-radius: 5px;
-                    // box-shadow: 2px 2px 7px -1px;
 
                     div {
-                        padding: 0.5rem 0;
+                        padding: 0.2rem 0;
                     }
                 }
-
                 // 아코디언끝
             }
         }
@@ -440,7 +453,6 @@ header {
             text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
             span {
-                // color: #60f6d3;
                 font-size: 2rem;
                 font-weight: normal;
             }
