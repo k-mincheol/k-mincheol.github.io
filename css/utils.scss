@@ -1,0 +1,32 @@
+/*반응형 화면 크기*/
+$mobile: 768px;
+$desktop: 1024px;
+$bigdesktop: 1680px;
+
+/*767px 이하*/
+@mixin mobile {
+    @media (max-width: $mobile - 1) {
+        @content;
+    }
+}
+
+/*768이상, 1023px 이하*/
+@mixin tablet {
+    @media (min-width: $mobile) and (max-width: $desktop - 1) {
+        @content;
+    }
+}
+
+/*1024px 이상, 1680 이하*/
+@mixin desktop {
+    @media (min-width: $desktop) and (max-width: $bigdesktop - 1) {
+        @content;
+    }
+}
+
+/*1680 이상*/
+@mixin bigdesktop {
+    @media (min-width: $bigdesktop) {
+        @content;
+    }
+}

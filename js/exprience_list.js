@@ -10,7 +10,7 @@ let exprienceDatas = [
             {
                 "name": "스스므",
                 "url": "https://ssmuniverse.com",
-                "url_admin": "susumu.adm.yageun.com",
+                "url_admin": "https://susumu.adm.yageun.com",
                 "described": "패션유튜버 최겨울 커뮤니티",
                 "detail": "패션 유튜버 최겨울 커뮤니티 사용자, 관리자페이지 퍼블리싱 & 프론트작업",
                 "use_skill": "HTML / CSS / JAVASCRIPT"
@@ -67,7 +67,7 @@ let exprienceDatas = [
                 "name": "smile UP",
                 // "url": "https://www.youtube.com/channel/UCn0cce5_pFt3g96daN_4IFQ",
                 "url": "",
-                "url_admin": "http://ts.yageun.com/home/login",
+                "url_admin": "",
                 "described": "미국 스탠포드대학교 Paul Kim 교수의 오랜 연구와 노하우를 바탕으로 만들어진 질의 응답 기반 소셜 러닝 플랫폼",
                 "detail": "사용자 페이지 퍼블리싱 & 프론트작업(현재 서비스 종료)",
                 "use_skill": "HTML / CSS / JAVASCRIPT"
@@ -83,7 +83,7 @@ let exprienceDatas = [
             {
                 "name": "음악저작권협회",
                 "url": "",
-                "admin_url": "riak.yageun.com",
+                "admin_url": "http://riak.yageun.com",
                 "described": "음악저작권관리",
                 "detail": "음악 저작권 관련 관리페이지 퍼블리싱 & 프론트작업",
                 "use_skill": "HTML / CSS / JAVASCRIPT"
