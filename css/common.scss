@@ -1238,7 +1238,7 @@ li {
                         .license-edu {
                             display: flex;
                         }
-                        
+
                         .info,
                         .skills,
                         .license,
@@ -1800,6 +1800,10 @@ li {
 
                 .exp-title {
                     line-height: 5rem;
+
+                    .project-title{
+                        margin-left: 0!important;
+                    }
                 }
 
                 .exprience-wrap {
@@ -1938,7 +1942,7 @@ li {
                 color: #fff;
                 margin-bottom: 4rem !important;
                 font-weight: bold;
-                font-size: 6rem;
+                font-size: 5rem;
                 text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
                 span {
