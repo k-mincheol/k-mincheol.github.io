@@ -1496,48 +1496,51 @@ li {
         .logo-link {
             font-size: 2.5rem;
         }
+        nav {
+            display: none;
 
-        ol {
-            .nav-item {
-                margin-right: 2rem;
+            ol {
+                .nav-item {
+                    margin-right: 2rem;
 
-                &.active {
+                    &.active {
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+
+                    &:hover {
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+
                     &::after {
-                        width: 100%;
-                    }
-                }
-
-                &:hover {
-                    &::after {
-                        width: 100%;
-                    }
-                }
-
-                &::after {
-                    position: absolute;
-                    left: 0;
-                    bottom: -2px;
-                    display: block;
-                    width: 0;
-                    height: 1px;
-                    background-color: #000;
-                    transition: width .4s;
-                    content: "";
-                }
-
-                a {
-                    display: flex;
-                    flex-flow: column;
-                    color: #60f6d3;
-
-                    .num {
-                        font-weight: lighter;
+                        position: absolute;
+                        left: 0;
+                        bottom: -2px;
+                        display: block;
+                        width: 0;
+                        height: 1px;
+                        background-color: #000;
+                        transition: width .4s;
+                        content: "";
                     }
 
-                    .nav-text {
-                        position: relative;
-                        font-size: 1.2rem;
-                        font-weight: 400;
+                    a {
+                        display: flex;
+                        flex-flow: column;
+                        color: #60f6d3;
+
+                        .num {
+                            font-weight: lighter;
+                        }
+
+                        .nav-text {
+                            position: relative;
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                        }
                     }
                 }
             }
