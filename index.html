@@ -32,19 +32,22 @@
             <strong class="logo-link" data-aos-delay="100" data-aos="fade-down">Mc's Portfolio</strong>
             <nav>
                 <ol class="d-flex align-items-center">
-                    <li class="nav-item main-item active" data-aos-delay="150" data-aos="fade-down" onclick="moveEvent(this)" data-target="main">
+                    <li class="nav-item main-item active" data-aos-delay="150" data-aos="fade-down"
+                        onclick="moveEvent(this)" data-target="main">
                         <a class="cursor-pointer">
                             <span class="num">01</span>
                             <span class="nav-text">Main</span>
                         </a>
                     </li>
-                    <li class="nav-item about-item" data-aos-delay="300" data-aos="fade-down" onclick="moveEvent(this)" data-target="about">
+                    <li class="nav-item about-item" data-aos-delay="300" data-aos="fade-down" onclick="moveEvent(this)"
+                        data-target="about">
                         <a class="cursor-pointer">
                             <span class="num">02</span>
                             <span class="nav-text">About</span>
                         </a>
                     </li>
-                    <li class="nav-item exp-item" data-aos-delay="450" data-aos="fade-down" onclick="moveEvent(this)" data-target="exp_pro">
+                    <li class="nav-item exp-item" data-aos-delay="450" data-aos="fade-down" onclick="moveEvent(this)"
+                        data-target="exp_pro">
                         <a class="cursor-pointer">
                             <span class="num">03</span>
                             <span class="nav-text">Experience & Project</span>
@@ -58,9 +61,11 @@
             <!-- Main -->
             <article id="main" class="article-box text-center pf-main" style="min-height: 100vh;">
                 <!-- 저는 웹사이트를 더욱 실용적이며 즐겁게 사용할 수 있도록 만드는 목표를 가지고 있는 -->
-                <div>
+                <div class="intro-text-wrap">
                     <h1 class="intro-text font-weight-bold mb-2" data-aos-delay="500" data-aos="fade-up">
-                        <span>안녕하세요!</span>
+                        <span>안녕하세요!
+                            <!-- <br>저는 웹사이트를 더욱 실용적이며 즐겁게 사용할 수 있도록 만드는 목표를 가지고 있는 -->
+                        </span>
                     </h1>
                     <h1 class="intro-text font-weight-bold " data-aos-delay="600" data-aos="fade-up">
                         <span>웹퍼블리셔 <strong>김민철</strong>입니다.</span>
@@ -72,201 +77,207 @@
                     <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 121"
                         preserveAspectRatio="xMidYMid meet">
                         <g fill="none" fill-rule="evenodd">
-                            <rect width="70" height="118" x="1.5" y="1.5" stroke="#000" stroke-width="3" rx="36" />
-                            <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#000" />
+                            <rect width="70" height="118" x="1.5" y="1.5" stroke="#fff" stroke-width="3" rx="36" />
+                            <circle class="scroll" cx="36.5" cy="31.5" r="7" fill="#fff" />
                         </g>
                     </svg>
                 </a>
             </article>
 
-            <article class="article-box pf-intro">
-                <!-- 소개 -->
-                <ol class="main-intro-list">
-                    <li class="main-intro-item" data-aos-delay="100" data-aos-duration="1000" data-aos="fade-up">
-                        <span class="main-intro-number">01</span>
-                        <strong class="main-intro-title">skills</strong>
-                        <ul class="main-intro-sub-list">
-                            <li class="main-intro-sub-item">- Html, Css, Scss, Javascript, Git</li>
-                            <li class="main-intro-sub-item">- Photoshop, Illustrator</li>
-                            <li class="main-intro-sub-item">- AutoCad, 3dMax, Sketchup</li>
-                        </ul>
-                    </li>
-                    <li class="main-intro-item" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up">
-                        <span class="main-intro-number">02</span>
-                        <strong class="main-intro-title">experience</strong>
-                        <ul class="main-intro-sub-list">
-                            <li class="main-intro-sub-item">- 야근몬스터 (프론트엔드)</li>
-                        </ul>
-                    </li>
-                    <li class="main-intro-item" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-up">
-                        <span class="main-intro-number">03</span>
-                        <strong class="main-intro-title">license</strong>
-                        <ul class="main-intro-sub-list">
-                            <li class="main-intro-sub-item">- GTQ 1급</li>
-                            <li class="main-intro-sub-item">- 정보처리기사 (필기) *실기예정</li>
-                            <li class="main-intro-sub-item">- 웹디자인기능사 (필기) *실기예정</li>
-                            <li class="main-intro-sub-item">- ATC캐드마스터 1급 (ATC 1급)</li>
-                            <li class="main-intro-sub-item">- ATC캐드마스터 2급 (CAT 2급)</li>
-                            <li class="main-intro-sub-item">- 운전면허 (2종보통)</li>
-                        </ul>
-                    </li>
-                    <li class="main-intro-item" data-aos-delay="400" data-aos-duration="1000" data-aos="fade-up">
-                        <span class="main-intro-number">04</span>
-                        <strong class="main-intro-title">education</strong>
-                        <ul class="main-intro-sub-list">
-                            <!-- <li class="main-intro-sub-item">- 라인컴퓨터아트 (인테리어디자인)</li> -->
-                            <li class="main-intro-sub-item">- 그린컴퓨터아카데미 (AutoCad)</li>
-                            <li class="main-intro-sub-item">- 비트캠프 (Web 개발)</li>
-                            <li class="main-intro-sub-item">- 한국산업기술대학교</li>
-                        </ul>
-                    </li>
-                </ol>
-            </article>
+            <article>
+                <article class="article-box pf-intro">
+                    <!-- 소개 -->
+                    <ol class="main-intro-list">
+                        <li class="main-intro-item" data-aos-delay="100" data-aos-duration="1000" data-aos="fade-up">
+                            <span class="main-intro-number">01</span>
+                            <strong class="main-intro-title">skills</strong>
+                            <ul class="main-intro-sub-list">
+                                <li class="main-intro-sub-item">- Html, Css, Scss, Javascript, Git</li>
+                                <li class="main-intro-sub-item">- Photoshop, Illustrator</li>
+                                <li class="main-intro-sub-item">- AutoCad, 3dMax, Sketchup</li>
+                            </ul>
+                        </li>
+                        <li class="main-intro-item" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up">
+                            <span class="main-intro-number">02</span>
+                            <strong class="main-intro-title">experience</strong>
+                            <ul class="main-intro-sub-list">
+                                <li class="main-intro-sub-item">- 야근몬스터 (프론트엔드)</li>
+                            </ul>
+                        </li>
+                        <li class="main-intro-item" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-up">
+                            <span class="main-intro-number">03</span>
+                            <strong class="main-intro-title">license</strong>
+                            <ul class="main-intro-sub-list">
+                                <li class="main-intro-sub-item">- GTQ 1급</li>
+                                <li class="main-intro-sub-item">- 정보처리기사 (필기) *실기예정</li>
+                                <li class="main-intro-sub-item">- 웹디자인기능사 (필기) *실기예정</li>
+                                <li class="main-intro-sub-item">- ATC캐드마스터 1급 (ATC 1급)</li>
+                                <li class="main-intro-sub-item">- ATC캐드마스터 2급 (CAT 2급)</li>
+                                <li class="main-intro-sub-item">- 운전면허 (2종보통)</li>
+                            </ul>
+                        </li>
+                        <li class="main-intro-item" data-aos-delay="400" data-aos-duration="1000" data-aos="fade-up">
+                            <span class="main-intro-number">04</span>
+                            <strong class="main-intro-title">education</strong>
+                            <ul class="main-intro-sub-list">
+                                <!-- <li class="main-intro-sub-item">- 라인컴퓨터아트 (인테리어디자인)</li> -->
+                                <li class="main-intro-sub-item">- 그린컴퓨터아카데미 (AutoCad)</li>
+                                <li class="main-intro-sub-item">- 비트캠프 (Web 개발)</li>
+                                <li class="main-intro-sub-item">- 한국산업기술대학교</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </article>
 
-            <!-- About -->
-            <article id="about" class="article-box pf-aboutme">
-                <h2 class="article-title" data-aos-delay="100" data-aos-duration="1000" data-aos="fade-right">
-                    <!-- <span>01.</span> -->
-                    About
-                </h2>
-                <div class="aboutme-wrap">
-                    <div class="aboutme-profile text-center">
-                        <div class="pc-photo" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-right">
-                            <img class="photo" src="./image/mincheol.jpg" alt="">
-                        </div>
-                        <div class="mobile-photo" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up">
-                            <div class="photo-back"></div>
-                            <img class="photo id-photo" src="./image/증명사진.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="aboutme-text">
-                        <div class="info" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-right">
-                            <div class="tag">Info</div>
-                            <div class="ml-3">
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="ri-user-fill mr-2"></i>
-                                    <font size="4">김민철(1994. 12. 31)</font>
-                                </div>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="ri-map-pin-2-fill mr-2"></i>
-                                    <font class="d-block" size="4">경기도 시흥시 옥구천동로420</font>
-                                </div>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="ri-mail-fill mr-2"></i>
-                                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mincheol.kmc@gmail.com"
-                                        target="_blank">
-                                        <font class="d-block" size="4">mincheol.kmc@gmail.com</font>
-                                    </a>
-                                </div>
+                <!-- About -->
+                <article id="about" class="article-box pf-aboutme">
+                    <h2 class="article-title" data-aos-delay="100" data-aos-duration="1000" data-aos="fade-right">
+                        <!-- <span>01.</span> -->
+                        About
+                    </h2>
+                    <div class="aboutme-wrap">
+                        <div class="aboutme-profile text-center">
+                            <div class="pc-photo" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-right">
+                                <img class="photo" src="./image/mincheol.jpg" alt="">
+                            </div>
+                            <div class="mobile-photo" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up">
+                                <div class="photo-back"></div>
+                                <img class="photo id-photo" src="./image/증명사진.jpg" alt="">
                             </div>
                         </div>
-                        <hr data-aos-delay="350" data-aos-duration="1000" data-aos="fade-right">
-                        <div class="skills" data-aos-delay="400" data-aos-duration="1000" data-aos="fade-right">
-                            <div class="tag">Skills</div>
-                            <div class="ml-3">
-                                <span class="skills-wrap">
-                                    <div class="skill-elem d-inline-block">
-                                        <img src="./image/htmlImg.png" alt="">
-                                        <h6>Html</h6>
-                                    </div>
-                                    <div class="skill-elem d-inline-block">
-                                        <img src="./image/cssImg.png" alt="">
-                                        <h6>Css</h6>
-                                    </div>
-                                    <div class="skill-elem d-inline-block">
-                                        <img src="./image/jsImg.png" alt="">
-                                        <h6>Javascript</h6>
-                                    </div>
-                                    <div class="skill-elem d-inline-block">
-                                        <img src="./image/photoshop.png" alt="">
-                                        <h6>Photoshop</h6>
-                                    </div>
-                                    <div class="skill-elem d-inline-block">
-                                        <img src="./image/illustrator.png" alt="">
-                                        <h6>Illustrator</h6>
-                                    </div>
-                                    <div class="skill-elem d-inline-block">
-                                        <img src="./image/autocadImg.png" alt="">
-                                        <h6>AutoCad</h6>
-                                    </div>
-                                    <div class="skill-elem d-inline-block">
-                                        <img src="./image/3dmaxImg.png" alt="">
-                                        <h6>3dMax</h6>
-                                    </div>
-                                    <div class="skill-elem d-inline-block">
-                                        <img src="./image/sketchupImg.png" alt="">
-                                        <h6>Sketchup</h6>
-                                    </div>
-                                </span>
-                            </div>
-                        </div>
-                        <hr data-aos-delay="450" data-aos-duration="1000" data-aos="fade-right">
-                        <div class="license-edu">
-                            <div class="license" data-aos-delay="500" data-aos-duration="1000" data-aos="fade-right">
-                                <div class="tag">License</div>
+                        <div class="aboutme-text">
+                            <div class="info" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-right">
+                                <div class="tag">Info</div>
                                 <div class="ml-3">
-                                    <div class="get-date d-inline-block">2023. 01</div>
-                                    <font size="2" color="gray">(한국생산성본부)</font>
-                                    <div class="get-name d-block">GTQ 1급 </div>
-                                    <div class="get-date">2022. 12</div>
-                                    <font size="2" color="gray">(한국생산성본부)</font>
-                                    <div class="get-name">ATC캐드마스터 2급 (CAT 2급)</div>
-                                    <div class="get-date">2022. 11</div>
-                                    <font size="2" color="gray">(한국생산성본부)</font>
-                                    <div class="get-name">ATC캐드마스터 1급 (ATC 1급)</div>
-                                    <div class="get-date">2022. 06</div>
-                                    <font size="2" color="gray">(한국산업인력공단)</font>
-                                    <div class="get-name">웹디자인기능사필기 <font size="3">(23. 03 실기예정)</font>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="ri-user-fill mr-2"></i>
+                                        <font size="4">김민철(1994. 12. 31)</font>
                                     </div>
-                                    <div class="get-date">2022. 03</div>
-                                    <font size="2" color="gray">(한국산업인력공단)</font>
-                                    <div class="get-name">정보처리기사필기 <font size="3">(23. 04 실기예정)</font>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="ri-map-pin-2-fill mr-2"></i>
+                                        <font class="d-block" size="4">경기도 시흥시 옥구천동로420</font>
                                     </div>
-                                    <div class="get-date">2013. 11</div>
-                                    <div class="get-name">2종보통운전면허</div>
-                                    <!-- <font size="2" color="gray">한국산업인력공단</font> -->
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="ri-mail-fill mr-2"></i>
+                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mincheol.kmc@gmail.com"
+                                            target="_blank">
+                                            <font class="d-block" size="4">mincheol.kmc@gmail.com</font>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="verticle-line"></div>
-                            <hr data-aos-delay="525" data-aos-duration="1000" data-aos="fade-right">
-                            <div class="education" data-aos-delay="550" data-aos-duration="1000" data-aos="fade-right">
-                                <div class="tag">Education</div>
+                            <hr data-aos-delay="350" data-aos-duration="1000" data-aos="fade-right">
+                            <div class="skills" data-aos-delay="400" data-aos-duration="1000" data-aos="fade-right">
+                                <div class="tag">Skills</div>
                                 <div class="ml-3">
-                                    <!-- <div class="get-date">2022. 09 ~ 2023. 03</div>
+                                    <span class="skills-wrap">
+                                        <div class="skill-elem d-inline-block">
+                                            <img src="./image/htmlImg.png" alt="">
+                                            <h6>Html</h6>
+                                        </div>
+                                        <div class="skill-elem d-inline-block">
+                                            <img src="./image/cssImg.png" alt="">
+                                            <h6>Css</h6>
+                                        </div>
+                                        <div class="skill-elem d-inline-block">
+                                            <img src="./image/jsImg.png" alt="">
+                                            <h6>Javascript</h6>
+                                        </div>
+                                        <div class="skill-elem d-inline-block">
+                                            <img src="./image/photoshop.png" alt="">
+                                            <h6>Photoshop</h6>
+                                        </div>
+                                        <div class="skill-elem d-inline-block">
+                                            <img src="./image/illustrator.png" alt="">
+                                            <h6>Illustrator</h6>
+                                        </div>
+                                        <div class="skill-elem d-inline-block">
+                                            <img src="./image/autocadImg.png" alt="">
+                                            <h6>AutoCad</h6>
+                                        </div>
+                                        <div class="skill-elem d-inline-block">
+                                            <img src="./image/3dmaxImg.png" alt="">
+                                            <h6>3dMax</h6>
+                                        </div>
+                                        <div class="skill-elem d-inline-block">
+                                            <img src="./image/sketchupImg.png" alt="">
+                                            <h6>Sketchup</h6>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                            <hr data-aos-delay="450" data-aos-duration="1000" data-aos="fade-right">
+                            <div class="license-edu">
+                                <div class="license" data-aos-delay="500" data-aos-duration="1000"
+                                    data-aos="fade-right">
+                                    <div class="tag">License</div>
+                                    <div class="ml-3">
+                                        <div class="get-date d-inline-block">2023. 01</div>
+                                        <font size="2" color="gray">(한국생산성본부)</font>
+                                        <div class="get-name d-block">GTQ 1급 </div>
+                                        <div class="get-date">2022. 12</div>
+                                        <font size="2" color="gray">(한국생산성본부)</font>
+                                        <div class="get-name">ATC캐드마스터 2급 (CAT 2급)</div>
+                                        <div class="get-date">2022. 11</div>
+                                        <font size="2" color="gray">(한국생산성본부)</font>
+                                        <div class="get-name">ATC캐드마스터 1급 (ATC 1급)</div>
+                                        <div class="get-date">2022. 06</div>
+                                        <font size="2" color="gray">(한국산업인력공단)</font>
+                                        <div class="get-name">웹디자인기능사필기 <font size="3">(23. 03 실기예정)</font>
+                                        </div>
+                                        <div class="get-date">2022. 03</div>
+                                        <font size="2" color="gray">(한국산업인력공단)</font>
+                                        <div class="get-name">정보처리기사필기 <font size="3">(23. 04 실기예정)</font>
+                                        </div>
+                                        <div class="get-date">2013. 11</div>
+                                        <div class="get-name">2종보통운전면허</div>
+                                        <!-- <font size="2" color="gray">한국산업인력공단</font> -->
+                                    </div>
+                                </div>
+                                <div class="verticle-line"></div>
+                                <hr data-aos-delay="525" data-aos-duration="1000" data-aos="fade-right">
+                                <div class="education" data-aos-delay="550" data-aos-duration="1000"
+                                    data-aos="fade-right">
+                                    <div class="tag">Education</div>
+                                    <div class="ml-3">
+                                        <!-- <div class="get-date">2022. 09 ~ 2023. 03</div>
                                     <font size="2" color="gray">(라인컴퓨터아트)</font>
                                     <span class="get-name">환경인테리어디자인 (AutoCad, 3dMax, Sketchup) 수료예정</span> -->
-                                    <div class="get-date">2022. 08 ~ 2022. 09</div>
-                                    <font size="2" color="gray">(그린컴퓨터아카데미)</font>
-                                    <span class="get-name">빠른설계를위한 AutoCad</span>
-                                    <div class="get-date">2019. 01 ~ 2019. 07</div>
-                                    <font size="2" color="gray">(비트캠프)</font>
-                                    <span class="get-name">UI/UX엔지니어링 및 응용 SW엔지니어링 양성과정</span>
-                                    <div class="get-date">2013. 03 ~ 2019. 02</div>
-                                    <span class="get-name">한국산업기술대학교(현 한국공학대학교) 학사</span>
-                                    <div class="get-date">2010. 03 ~ 2013. 02</div>
-                                    <span class="get-name">덕소고등학교 졸업</span>
+                                        <div class="get-date">2022. 08 ~ 2022. 09</div>
+                                        <font size="2" color="gray">(그린컴퓨터아카데미)</font>
+                                        <span class="get-name">빠른설계를위한 AutoCad</span>
+                                        <div class="get-date">2019. 01 ~ 2019. 07</div>
+                                        <font size="2" color="gray">(비트캠프)</font>
+                                        <span class="get-name">UI/UX엔지니어링 및 응용 SW엔지니어링 양성과정</span>
+                                        <div class="get-date">2013. 03 ~ 2019. 02</div>
+                                        <span class="get-name">한국산업기술대학교(현 한국공학대학교) 학사</span>
+                                        <div class="get-date">2010. 03 ~ 2013. 02</div>
+                                        <span class="get-name">덕소고등학교 졸업</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <!-- 02. 경력 & 프로젝트 -->
-            <article id="exp_pro" class="article-box pf-exprience">
-                <h2 class="article-title" data-aos-delay="100" data-aos-duration="1000" data-aos="fade-right">
-                    <!-- <span>02.</span> -->
-                    <div class="exp-title">
-                        <div>Experience</div>
-                        <div class="project-title" style="margin-left: 15rem;">& Project</div>
+                <!-- 02. 경력 & 프로젝트 -->
+                <article id="exp_pro" class="article-box pf-exprience">
+                    <h2 class="article-title" data-aos-delay="100" data-aos-duration="1000" data-aos="fade-right">
+                        <!-- <span>02.</span> -->
+                        <div class="exp-title">
+                            <div>Experience</div>
+                            <div class="project-title" style="margin-left: 15rem;">& Project</div>
+                        </div>
+                    </h2>
+                    <div class="exprience-wrap" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up">
+
                     </div>
-                </h2>
-                <div class="exprience-wrap" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up">
-                    
-                </div>
+                </article>
             </article>
         </section>
     </div>
+    <button class="move-top-btn btn border border-dark" onclick="moveEvent(this, true)"><i
+            class="ri-arrow-up-s-line"></i></button>
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.3.js"
@@ -370,7 +381,7 @@
         }
 
         let navItems = document.querySelectorAll(".nav-item");
-        function moveEvent(elem) {
+        function moveEvent(elem, up = false) {
             let target = elem.dataset.target;
 
             for (let i = 0; i < navItems.length; i++) {
@@ -378,27 +389,46 @@
             }
 
             elem.classList.add("active");
-            
-            document.getElementById(target).scrollIntoView({ behavior: 'smooth' })
+            if (up) {
+                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            } else {
+                document.getElementById(target).scrollIntoView({ behavior: 'smooth' })
+            }
         }
 
         let mainLoc = document.getElementById('main').offsetTop;
+        let introLoc = document.querySelector('.pf-intro').offsetTop;
         let aboutLoc = document.getElementById('about').offsetTop;
         let expproLoc = document.getElementById('exp_pro').offsetTop;
-        let test = false;
+        let headerHeight = document.querySelector('header').offsetHeight;
         window.addEventListener('scroll', () => {
             let nowLoc = window.scrollY;
-            
+
             for (let i = 0; i < navItems.length; i++) {
                 navItems[i].classList.remove("active");
             }
 
-            if(nowLoc >= mainLoc && nowLoc < aboutLoc) {
+            if (nowLoc >= mainLoc && nowLoc < aboutLoc) {
                 document.querySelector('.main-item').classList.add('active');
-            }else if(nowLoc >= aboutLoc && nowLoc < expproLoc) {
+            } else if (nowLoc >= aboutLoc && nowLoc < expproLoc) {
                 document.querySelector('.about-item').classList.add('active');
-            }else if(nowLoc >= expproLoc) {
+            } else if (nowLoc >= expproLoc) {
                 document.querySelector('.exp-item').classList.add('active');
+            }
+
+            // 헤더 nav-item 색 변경
+            if (nowLoc >= (introLoc - headerHeight)) {
+                document.querySelector('header').style.color = '#000';
+                document.querySelector('header').style.transition = '0.4s';
+                for (let i = 0; i < navItems.length; i++) {
+                    navItems[i].style.setProperty('--background', '#000');
+                }
+            } else {
+                document.querySelector('header').style.color = '#fff'
+                document.querySelector('header').style.transition = '0.4s';
+                for (let i = 0; i < navItems.length; i++) {
+                    navItems[i].style.setProperty('--background', '#fff');
+                }
             }
         });
 

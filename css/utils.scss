@@ -24,9 +24,9 @@ $bigdesktop: 1680px;
     }
 }
 
-/*1680 이상*/
-@mixin bigdesktop {
-    @media (min-width: $bigdesktop) {
-        @content;
-    }
-}
+// /*1680 이상*/
+// @mixin bigdesktop {
+//     @media (min-width: $bigdesktop) {
+//         @content;
+//     }
+// }
