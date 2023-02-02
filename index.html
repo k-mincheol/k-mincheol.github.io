@@ -56,6 +56,15 @@
                     </li>
                 </ol>
             </nav>
+            <div class="frame">
+                <div class="center">
+                    <div class="wrap-bar">
+                        <div class="btn-bar one"></div>
+                        <div class="btn-bar two"></div>
+                        <div class="btn-bar three"></div>
+                    </div>
+                </div>
+            </div>
         </header>
         <div class="progress d-block" data-aos-delay="0" data-aos="fade-down">
             <div class="bar"></div>
@@ -286,7 +295,7 @@
                                         <!-- <font size="2" color="gray">한국산업인력공단</font> -->
                                     </div>
                                 </div>
-                                <div class="verticle-line" data-aos-delay="525" data-aos-duration="1000" data-aos="fade-right"></div>
+                                <div class="verticle-line" data-aos-delay="600" data-aos-duration="1000" data-aos="fade-up"></div>
                                 <hr data-aos-delay="525" data-aos-duration="1000" data-aos="fade-right">
                                 <div class="education" data-aos-delay="550" data-aos-duration="1000"
                                     data-aos="fade-right">
@@ -496,6 +505,17 @@
 
         // 아코디언
         $("#accordion").accordion();
+
+        const menu = document.querySelector(".wrap-bar");
+        let count = 0;
+
+        menu.addEventListener("click",()=>{
+            menu.classList.toggle("active");
+            count ++;
+            if((count&2) === 0){
+                menu.classList.add('deactive');
+            }
+        });
 
         AOS.init();
     </script>

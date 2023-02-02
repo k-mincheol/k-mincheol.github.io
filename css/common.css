@@ -95,7 +95,7 @@ header {
   box-sizing: border-box;
   z-index: 50;
   background-color: rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid #ccc;
+  box-shadow: 1px 1px 1px 1px grey;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   color: #fff;
@@ -136,6 +136,9 @@ header ol .nav-item a .nav-text {
   position: relative;
   font-size: 1.2rem;
   font-weight: 400;
+}
+header .frame {
+  display: none;
 }
 
 .progress {
@@ -642,6 +645,142 @@ header ol .nav-item a .nav-text {
     font-size: 6rem;
   }
 }
+@-webkit-keyframes one {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, 10px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+  }
+}
+@keyframes one {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, 10px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+  }
+}
+@-webkit-keyframes two {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    margin: 10px 0 10px;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+    margin: 0;
+  }
+}
+@keyframes two {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    margin: 10px 0 10px;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+    margin: 0;
+  }
+}
+@-webkit-keyframes three {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+  }
+}
+@keyframes three {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+  }
+}
+@-webkit-keyframes one-re {
+  0% {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+  }
+  50% {
+    transform: translate3d(0, 10px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+@keyframes one-re {
+  0% {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+  }
+  50% {
+    transform: translate3d(0, 10px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+@-webkit-keyframes two-re {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    margin: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    margin: 10px 0 10px;
+  }
+}
+@keyframes two-re {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    margin: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    margin: 10px 0 10px;
+  }
+}
+@-webkit-keyframes three-re {
+  0% {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+@keyframes three-re {
+  0% {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
 @media (max-width: 767px) {
   hr {
     margin: 2vw 0;
@@ -655,6 +794,56 @@ header ol .nav-item a .nav-text {
   }
   header nav {
     display: none;
+  }
+  header .frame {
+    display: block;
+    width: 40px;
+    height: 25px;
+    cursor: pointer;
+  }
+  header .frame .center {
+    width: 100%;
+    height: 100%;
+  }
+  header .frame .center .wrap-bar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  header .frame .center .wrap-bar .btn-bar {
+    width: 100%;
+    height: 5px;
+    transition: 0.7s;
+    background: #fff;
+    background-color: #fff;
+    border-radius: 3px;
+  }
+  header .frame .center .wrap-bar.deactive .one {
+    -webkit-animation: one-re 0.5s forwards;
+            animation: one-re 0.5s forwards;
+  }
+  header .frame .center .wrap-bar.deactive .two {
+    -webkit-animation: two-re 0.5s forwards;
+            animation: two-re 0.5s forwards;
+  }
+  header .frame .center .wrap-bar.deactive .three {
+    -webkit-animation: three-re 0.5s forwards;
+            animation: three-re 0.5s forwards;
+  }
+  header .frame .center .wrap-bar.deactive.active .one {
+    -webkit-animation: one 0.5s forwards;
+            animation: one 0.5s forwards;
+  }
+  header .frame .center .wrap-bar.deactive.active .two {
+    -webkit-animation: two 0.5s forwards;
+            animation: two 0.5s forwards;
+  }
+  header .frame .center .wrap-bar.deactive.active .three {
+    -webkit-animation: three 0.5s forwards;
+            animation: three 0.5s forwards;
   }
   .progress {
     top: 5rem;

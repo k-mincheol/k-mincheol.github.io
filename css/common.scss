@@ -72,7 +72,8 @@ header {
     box-sizing: border-box;
     z-index: 50;
     background-color: rgb(255 255 255 / 20%);
-    border-bottom: 1px solid #ccc;
+    // border-bottom: 1px solid #ccc;
+    box-shadow: 1px 1px 1px 1px grey;
     backdrop-filter: blur(5px);
     color: #fff;
 
@@ -125,6 +126,10 @@ header {
                 }
             }
         }
+    }
+
+    .frame {
+        display: none;
     }
 }
 
@@ -664,7 +669,79 @@ header {
     }
 }
 
+@keyframes one {
+    0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    50% {
+    transform: translate3d(0, 10px, 0) rotate(0);
+    }
+    100% {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+    }
+}
 
+@keyframes two {
+    0% {
+    transform :scale(1);
+        opacity:1;
+        margin:10px 0 10px
+    }
+    100% {
+        transform: scale(0);
+      opacity:0;
+      margin:0;
+    }
+}
+
+@keyframes three {
+    0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    50% {
+    transform: translate3d(0, -10px, 0) rotate(0);
+    }
+    100% {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+    }
+}
+
+@keyframes one-re {
+    0% {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+    }
+    50% {
+    transform: translate3d(0, 10px, 0) rotate(0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
+
+@keyframes two-re {
+    0% {
+        transform: scale(0);
+      opacity:0;
+      margin:0;
+    }
+    100% {
+        transform :scale(1);
+        opacity:1;
+        margin:10px 0 10px
+    }
+}
+
+@keyframes three-re {
+    0% {
+        transform: translate3d(0, -10px, 0) rotate(-45deg);
+    }
+    50% {
+    transform: translate3d(0, -10px, 0) rotate(0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
 // 모바일
 @include mobile {
     hr {
@@ -681,6 +758,65 @@ header {
 
         nav {
             display: none;
+        }
+
+        .frame {
+            display: block;
+            width: 40px;
+            height: 25px;
+            cursor:pointer;
+
+            .center {
+                width: 100%;
+                height: 100%;
+
+                .wrap-bar{
+                    width:100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    overflow: hidden;
+    
+                    .btn-bar{
+                        width:100%;
+                        height:5px;
+                        transition: 0.7s;
+                        background: #fff;
+                        background-color: #fff;
+                        border-radius: 3px;
+                        // box-shadow: 0 2px 10px 0 rgb(0 0 0 / 30%);
+                    }
+
+                    &.deactive {
+                        .one {
+                            animation: one-re 0.5s forwards;
+                        }
+
+                        .two {
+                            animation: two-re 0.5s forwards;
+                        }
+
+                        .three {
+                            animation: three-re 0.5s forwards;
+                        }
+
+                        &.active {
+                            .one {
+                                animation: one 0.5s forwards;
+                            }
+    
+                            .two{
+                                animation: two 0.5s forwards;
+                            }
+    
+                            .three{
+                                animation: three 0.5s forwards;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
