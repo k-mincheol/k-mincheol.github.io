@@ -57,6 +57,9 @@
                 </ol>
             </nav>
         </header>
+        <div class="progress d-block" data-aos-delay="0" data-aos="fade-down">
+            <div class="bar"></div>
+        </div>
 
         <section class="full-wrap h-100 m-auto">
             <!-- <div id="loader">
@@ -283,7 +286,7 @@
                                         <!-- <font size="2" color="gray">한국산업인력공단</font> -->
                                     </div>
                                 </div>
-                                <div class="verticle-line"></div>
+                                <div class="verticle-line" data-aos-delay="525" data-aos-duration="1000" data-aos="fade-right"></div>
                                 <hr data-aos-delay="525" data-aos-duration="1000" data-aos="fade-right">
                                 <div class="education" data-aos-delay="550" data-aos-duration="1000"
                                     data-aos="fade-right">
@@ -479,6 +482,13 @@
                     navItems[i].style.setProperty('--background', '#fff');
                 }
             }
+
+            let windowScrollTop = $(window).scrollTop();
+            let height = $(document).height() - $(window).height();
+            let percent = Math.floor(windowScrollTop / height * 100);
+
+            document.querySelector(".bar").style.width = percent + "%";
+
         });
 
         // 처음 페이지 로딩 시 경력사항 초기화
