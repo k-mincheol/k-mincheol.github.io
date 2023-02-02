@@ -262,7 +262,7 @@ header ol .nav-item a .nav-text {
   width: 100%;
   height: 100%;
   z-index: 10;
-  background: url("../image/back5.jpg") #c0c0c0 center fixed no-repeat;
+  background: url("../image/back5.jpg") #c0c0c0 top center fixed no-repeat;
   background-size: cover;
   display: block;
 }
