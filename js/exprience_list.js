@@ -122,20 +122,4 @@ let exprienceDatas = [
             },
         ]
     },
-    // {
-    //     "id": 2,
-    //     "name": "기원킹몬스터",
-    //     "date": "2022.09 ~ 2023.01",
-    //     "detail": "SI(System Integration), SM(System Management)",
-    //     "description": "Xd, Zeplin 으로 받은 디자인을 받아 퍼블리싱 & 프론트엔드 작업 진행하였습니다.",
-    //     "skills": "Html · css · javascript · Git · Xd · Zeplin · Microsoft teams · slack · trello · vscode",
-    //     "project_list": [
-    //         {
-    //             "name": "기원킹킹킹",
-    //             "described": "패션유튜버 최겨울 커뮤니티",
-    //             "detail": "패션 유튜버 최겨울 커뮤니티로 블라블라123123",
-    //             "use_skill": "HTML / CSS / JAVASCRIPT"
-    //         }
-    //     ]
-    // }
 ];
