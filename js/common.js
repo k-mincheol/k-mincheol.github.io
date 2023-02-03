@@ -129,12 +129,8 @@ menu.addEventListener("click", () => {
     console.log(count);
     menu.classList.toggle("active");
 
-    if(menu.classList.contains('active')) {
-        document.querySelector('.mobile-side').style.width = '100%';
-        document.querySelector('.mobile-side').style.transition = '0.4s';
-    }else {
-        document.querySelector('.mobile-side').style.width = '0%';
-    }
+    document.querySelector('.mobile-side').style.width = menu.classList.contains('active') ? '100%' : '0%';
+    document.querySelector('.mobile-side').style.transition = '0.4s';
 
     count++;
 
