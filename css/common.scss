@@ -889,6 +889,12 @@ footer {
 
     .full-wrap {
         .article-box {
+            &.pf-main {
+                .intro-text-wrap {
+                    padding-top: 20rem;
+                }
+            }
+
             &.pf-intro {
                 width: 90%;
                 padding: 3rem 0;

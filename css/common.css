@@ -909,6 +909,9 @@ footer {
   .verticle-line {
     display: none;
   }
+  .full-wrap .article-box.pf-main .intro-text-wrap {
+    padding-top: 20rem;
+  }
   .full-wrap .article-box.pf-intro {
     width: 90%;
     padding: 3rem 0;
