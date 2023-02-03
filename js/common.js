@@ -126,8 +126,18 @@ const menu = document.querySelector(".wrap-bar");
 let count = 0;
 
 menu.addEventListener("click", () => {
+    console.log(count);
     menu.classList.toggle("active");
+
+    if(menu.classList.contains('active')) {
+        document.querySelector('.mobile-side').style.width = '100%';
+        document.querySelector('.mobile-side').style.transition = '0.4s';
+    }else {
+        document.querySelector('.mobile-side').style.width = '0%';
+    }
+
     count++;
+
     if ((count & 2) === 0) {
         menu.classList.add('deactive');
     }

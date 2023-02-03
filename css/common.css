@@ -88,6 +88,15 @@ hr {
   margin: 2.5rem 0;
 }
 
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-side {
+  display: none;
+}
+
 header {
   position: absolute;
   height: 6rem;
@@ -154,11 +163,6 @@ header .frame {
   background-color: #212529;
   height: 2px;
   transition: 0.2s;
-}
-
-#wrap {
-  width: 100%;
-  height: 100%;
 }
 
 .verticle-line {
@@ -843,6 +847,24 @@ footer {
   hr {
     margin: 2vw 0;
   }
+  .mobile-side {
+    position: fixed;
+    height: 100%;
+    background-color: #fff;
+    width: 0;
+    right: 0;
+    z-index: 50;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+    display: block;
+    padding: 13rem 0;
+  }
+  .mobile-side ol {
+    width: 350px;
+    margin: 0 auto;
+  }
   header {
     height: 5rem;
     padding: 0 3%;
@@ -870,6 +892,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    z-index: 100;
   }
   header .frame .center .wrap-bar .btn-bar {
     width: 80%;
