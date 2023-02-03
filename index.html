@@ -414,8 +414,8 @@
                     panelElemHtml = panelElemHtml.replaceAll(/{{NAME}}/gi, projectDatas[j].name);
                     panelElemHtml = panelElemHtml.replaceAll(/{{LINK}}/gi, projectDatas[j].url);
                     panelElemHtml = panelElemHtml.replaceAll(/{{IS_VIEW}}/gi, projectDatas[j].url == '' ? 'hidden' : '');
-                    panelElemHtml = panelElemHtml.replaceAll(/{{ADMIN_LINK}}/gi, projectDatas[j].url_admin);
-                    panelElemHtml = panelElemHtml.replaceAll(/{{IS_ADMIN_VIEW}}/gi, projectDatas[j].url_admin == '' ? 'hidden' : '');
+                    panelElemHtml = panelElemHtml.replaceAll(/{{ADMIN_LINK}}/gi, projectDatas[j].admin_url);
+                    panelElemHtml = panelElemHtml.replaceAll(/{{IS_ADMIN_VIEW}}/gi, projectDatas[j].admin_url == '' ? 'hidden' : '');
                     panelElemHtml = panelElemHtml.replaceAll(/{{DESCRIBED}}/gi, projectDatas[j].described);
                     panelElemHtml = panelElemHtml.replaceAll(/{{DETAIL}}/gi, projectDatas[j].detail);
                     panelElemHtml = panelElemHtml.replaceAll(/{{USE_SKILL}}/gi, projectDatas[j].use_skill);
