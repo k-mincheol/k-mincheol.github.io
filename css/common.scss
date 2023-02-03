@@ -58,7 +58,6 @@ li {
     position: fixed;
     right: 2%;
     bottom: 5%;
-    z-index: 10;
 }
 
 // 제일큰화면
@@ -252,12 +251,13 @@ header {
             height: 100%;
             z-index: 10;
             background-color: #212529;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
 
             .intro-text-wrap {
                 color: #fff;
+                padding-top: 24rem;
             }
 
             .waves {
