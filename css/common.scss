@@ -58,6 +58,7 @@ li {
     position: fixed;
     right: 2%;
     bottom: 5%;
+    z-index: 10;
 }
 
 // 제일큰화면
@@ -143,7 +144,7 @@ header {
     z-index: 51;
 
     .bar {
-        background-color: #000;
+        background-color: #212529;
         height: 2px;
         transition: .2s;
     }
@@ -250,20 +251,13 @@ header {
             width: 100%;
             height: 100%;
             z-index: 10;
-            // background: url('../image/back5.jpg') #c0c0c0 top center fixed no-repeat;
-            // background-size: cover;
-            background-color: #000;
-            display: block;
-            // box-shadow: inset 0px 0px 50px 0px grey;
+            background-color: #212529;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             .intro-text-wrap {
-                // padding-top: 30rem;
                 color: #fff;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
             }
 
             .waves {
@@ -291,7 +285,7 @@ header {
 
                     &:hover {
                         .main-intro-title {
-                            color: #000;
+                            color: #212529;
                         }
 
                         .main-intro-number {
@@ -312,7 +306,7 @@ header {
                     .main-intro-number {
                         font-size: 4.5rem;
                         font-weight: bold;
-                        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                        text-shadow: -1px -1px 0 #212529, 1px -1px 0 #212529, -1px 1px 0 #212529, 1px 1px 0 #212529;
                         position: absolute;
                         top: -45px;
                         left: -35px;
@@ -326,7 +320,7 @@ header {
                         display: block;
                         font-weight: bold;
                         color: #fff;
-                        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                        text-shadow: -1px -1px 0 #212529, 1px -1px 0 #212529, -1px 1px 0 #212529, 1px 1px 0 #212529;
                         transition: all .2s;
                     }
                 }
@@ -372,9 +366,9 @@ header {
                                 }
 
                                 &:hover {
-                                    filter: drop-shadow(5px 5px 5px #000);
+                                    filter: drop-shadow(5px 5px 5px #212529);
                                     transition: 0.2s;
-                                    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                                    text-shadow: -1px -1px 0 #212529, 1px -1px 0 #212529, -1px 1px 0 #212529, 1px 1px 0 #212529;
                                     color: white;
                                 }
                             }
@@ -397,7 +391,7 @@ header {
                     .tag {
                         border: 1px solid #8f8f8f;
                         border-radius: 5px;
-                        color: #000;
+                        color: #212529;
                         font-size: 1.2rem;
                         margin-right: 1rem;
                         width: 7rem;
@@ -424,7 +418,7 @@ header {
 
         &.pf-exprience {
             width: 80%;
-            height: 100vh;
+            // height: 100vh;
             min-height: 100%;
             margin: 0 auto;
             padding: 7rem 0 10rem 0;
@@ -537,7 +531,7 @@ header {
 
                 .active,
                 .accordion:hover {
-                    color: black;
+                    color: #212529;
                     font-weight: bold;
                 }
 
@@ -570,7 +564,7 @@ header {
             margin-bottom: 4rem !important;
             font-weight: bold;
             font-size: 8rem;
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            text-shadow: -1px -1px 0 #212529, 1px -1px 0 #212529, -1px 1px 0 #212529, 1px 1px 0 #212529;
 
             span {
                 font-size: 2rem;
@@ -578,12 +572,17 @@ header {
             }
 
             &:hover {
-                color: #000;
+                color: #212529;
                 transition: all .4s;
-                text-shadow: 3px 3px 7px #000;
+                text-shadow: 3px 3px 7px #212529;
             }
         }
     }
+}
+
+footer {
+    height: 10rem;
+    background: #212529;
 }
 
 // 데스크탑
@@ -665,7 +664,7 @@ header {
                             transform: rotate(3deg);
                             z-index: 9;
                             opacity: 0.5;
-                            background: black;
+                            background: #212529;
                         }
 
                         .id-photo {
@@ -721,48 +720,55 @@ header {
 
 @keyframes one {
     0% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
+        transform: translate3d(0, 0, 0) rotate(0deg);
     }
+
     50% {
-    transform: translate3d(0, 10px, 0) rotate(0);
+        transform: translate3d(0, 10px, 0) rotate(0);
     }
+
     100% {
-    transform: translate3d(0, 10px, 0) rotate(45deg);
+        transform: translate3d(0, 10px, 0) rotate(45deg);
     }
 }
 
 @keyframes two {
     0% {
-    transform :scale(1);
-        opacity:1;
-        margin:10px 0 10px
+        transform: scale(1);
+        opacity: 1;
+        margin: 10px 0 10px
     }
+
     100% {
         transform: scale(0);
-      opacity:0;
-      margin:0;
+        opacity: 0;
+        margin: 0;
     }
 }
 
 @keyframes three {
     0% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
+        transform: translate3d(0, 0, 0) rotate(0deg);
     }
+
     50% {
-    transform: translate3d(0, -10px, 0) rotate(0);
+        transform: translate3d(0, -10px, 0) rotate(0);
     }
+
     100% {
-    transform: translate3d(0, -10px, 0) rotate(-45deg);
+        transform: translate3d(0, -10px, 0) rotate(-45deg);
     }
 }
 
 @keyframes one-re {
     0% {
-    transform: translate3d(0, 10px, 0) rotate(45deg);
+        transform: translate3d(0, 10px, 0) rotate(45deg);
     }
+
     50% {
-    transform: translate3d(0, 10px, 0) rotate(0);
+        transform: translate3d(0, 10px, 0) rotate(0);
     }
+
     100% {
         transform: translate3d(0, 0, 0) rotate(0deg);
     }
@@ -771,13 +777,13 @@ header {
 @keyframes two-re {
     0% {
         transform: scale(0);
-      opacity:0;
-      margin:0;
+        opacity: 0;
+        margin: 0;
     }
+
     100% {
-        transform :scale(1);
-        opacity:1;
-        margin:10px 0 10px
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
@@ -785,13 +791,16 @@ header {
     0% {
         transform: translate3d(0, -10px, 0) rotate(-45deg);
     }
+
     50% {
-    transform: translate3d(0, -10px, 0) rotate(0);
+        transform: translate3d(0, -10px, 0) rotate(0);
     }
+
     100% {
         transform: translate3d(0, 0, 0) rotate(0deg);
     }
 }
+
 // 모바일
 @include mobile {
     hr {
@@ -814,23 +823,23 @@ header {
             display: block;
             width: 40px;
             height: 25px;
-            cursor:pointer;
+            cursor: pointer;
 
             .center {
                 width: 100%;
                 height: 100%;
 
-                .wrap-bar{
-                    width:100%;
+                .wrap-bar {
+                    width: 100%;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     overflow: hidden;
-    
-                    .btn-bar{
-                        width:100%;
-                        height:5px;
+
+                    .btn-bar {
+                        width: 80%;
+                        height: 5px;
                         transition: 0.7s;
                         background: #fff;
                         background-color: #fff;
@@ -855,12 +864,12 @@ header {
                             .one {
                                 animation: one 0.5s forwards;
                             }
-    
-                            .two{
+
+                            .two {
                                 animation: two 0.5s forwards;
                             }
-    
-                            .three{
+
+                            .three {
                                 animation: three 0.5s forwards;
                             }
                         }
@@ -880,11 +889,6 @@ header {
 
     .full-wrap {
         .article-box {
-            &.pf-main {
-                .waves {
-                }
-            }
-
             &.pf-intro {
                 width: 90%;
                 padding: 3rem 0;
@@ -931,7 +935,7 @@ header {
                             transform: rotate(3deg);
                             z-index: 9;
                             opacity: 0.5;
-                            background: black;
+                            background: #212529;
                         }
 
                         .id-photo {
@@ -972,7 +976,7 @@ header {
 
             &.pf-exprience {
                 width: 90%;
-    
+
                 .exp-title {
                     line-height: 5rem;
 

@@ -82,6 +82,7 @@ li {
   position: fixed;
   right: 2%;
   bottom: 5%;
+  z-index: 10;
 }
 
 hr {
@@ -151,7 +152,7 @@ header .frame {
   z-index: 51;
 }
 .progress .bar {
-  background-color: #000;
+  background-color: #212529;
   height: 2px;
   transition: 0.2s;
 }
@@ -331,16 +332,13 @@ header .frame {
   width: 100%;
   height: 100%;
   z-index: 10;
-  background-color: #000;
-  display: block;
-}
-.full-wrap .article-box.pf-main .intro-text-wrap {
-  color: #fff;
-  height: 100%;
+  background-color: #212529;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+}
+.full-wrap .article-box.pf-main .intro-text-wrap {
+  color: #fff;
 }
 .full-wrap .article-box.pf-main .waves {
   bottom: 0;
@@ -364,7 +362,7 @@ header .frame {
   margin: 0 auto;
 }
 .full-wrap .article-box.pf-intro .main-intro-list .main-intro-item:hover .main-intro-title {
-  color: #000;
+  color: #212529;
 }
 .full-wrap .article-box.pf-intro .main-intro-list .main-intro-item:hover .main-intro-number {
   color: #fff;
@@ -380,7 +378,7 @@ header .frame {
 .full-wrap .article-box.pf-intro .main-intro-list .main-intro-item .main-intro-number {
   font-size: 4.5rem;
   font-weight: bold;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #212529, 1px -1px 0 #212529, -1px 1px 0 #212529, 1px 1px 0 #212529;
   position: absolute;
   top: -45px;
   left: -35px;
@@ -393,7 +391,7 @@ header .frame {
   display: block;
   font-weight: bold;
   color: #fff;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #212529, 1px -1px 0 #212529, -1px 1px 0 #212529, 1px 1px 0 #212529;
   transition: all 0.2s;
 }
 .full-wrap .article-box.pf-aboutme {
@@ -436,9 +434,9 @@ header .frame {
 .full-wrap .article-box.pf-aboutme .aboutme-wrap .aboutme-text .skills .skills-wrap .skill-elem:hover,
 .full-wrap .article-box.pf-aboutme .aboutme-wrap .aboutme-text .license .skills-wrap .skill-elem:hover,
 .full-wrap .article-box.pf-aboutme .aboutme-wrap .aboutme-text .education .skills-wrap .skill-elem:hover {
-  filter: drop-shadow(5px 5px 5px #000);
+  filter: drop-shadow(5px 5px 5px #212529);
   transition: 0.2s;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #212529, 1px -1px 0 #212529, -1px 1px 0 #212529, 1px 1px 0 #212529;
   color: white;
 }
 .full-wrap .article-box.pf-aboutme .aboutme-wrap .aboutme-text .info .get-date,
@@ -461,7 +459,7 @@ header .frame {
 .full-wrap .article-box.pf-aboutme .aboutme-wrap .aboutme-text .tag {
   border: 1px solid #8f8f8f;
   border-radius: 5px;
-  color: #000;
+  color: #212529;
   font-size: 1.2rem;
   margin-right: 1rem;
   width: 7rem;
@@ -481,7 +479,6 @@ header .frame {
 }
 .full-wrap .article-box.pf-exprience {
   width: 80%;
-  height: 100vh;
   min-height: 100%;
   margin: 0 auto;
   padding: 7rem 0 10rem 0;
@@ -572,7 +569,7 @@ header .frame {
 }
 .full-wrap .article-box.pf-exprience .exprience-detail .active,
 .full-wrap .article-box.pf-exprience .exprience-detail .accordion:hover {
-  color: black;
+  color: #212529;
   font-weight: bold;
 }
 .full-wrap .article-box.pf-exprience .exprience-detail .accordion:before {
@@ -596,16 +593,21 @@ header .frame {
   margin-bottom: 4rem !important;
   font-weight: bold;
   font-size: 8rem;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #212529, 1px -1px 0 #212529, -1px 1px 0 #212529, 1px 1px 0 #212529;
 }
 .full-wrap .article-box .article-title span {
   font-size: 2rem;
   font-weight: normal;
 }
 .full-wrap .article-box .article-title:hover {
-  color: #000;
+  color: #212529;
   transition: all 0.4s;
-  text-shadow: 3px 3px 7px #000;
+  text-shadow: 3px 3px 7px #212529;
+}
+
+footer {
+  height: 10rem;
+  background: #212529;
 }
 
 @media (min-width: 1024px) and (max-width: 1679px) {
@@ -667,7 +669,7 @@ header .frame {
     transform: rotate(3deg);
     z-index: 9;
     opacity: 0.5;
-    background: black;
+    background: #212529;
   }
   .full-wrap .article-box.pf-aboutme .aboutme-wrap .mobile-photo .id-photo {
     position: relative;
@@ -805,7 +807,6 @@ header .frame {
   100% {
     transform: scale(1);
     opacity: 1;
-    margin: 10px 0 10px;
   }
 }
 @keyframes two-re {
@@ -817,7 +818,6 @@ header .frame {
   100% {
     transform: scale(1);
     opacity: 1;
-    margin: 10px 0 10px;
   }
 }
 @-webkit-keyframes three-re {
@@ -875,7 +875,7 @@ header .frame {
     overflow: hidden;
   }
   header .frame .center .wrap-bar .btn-bar {
-    width: 100%;
+    width: 80%;
     height: 5px;
     transition: 0.7s;
     background: #fff;
@@ -952,7 +952,7 @@ header .frame {
     transform: rotate(3deg);
     z-index: 9;
     opacity: 0.5;
-    background: black;
+    background: #212529;
   }
   .full-wrap .article-box.pf-aboutme .aboutme-wrap .mobile-photo .id-photo {
     position: relative;
