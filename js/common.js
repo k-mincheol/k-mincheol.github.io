@@ -113,6 +113,7 @@ window.addEventListener('scroll', () => {
     let percent = Math.floor(windowScrollTop / height * 100);
 
     document.querySelector(".bar").style.width = percent + "%";
+    document.querySelector(".circle").style.left = percent + "%";
 
 });
 
