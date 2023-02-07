@@ -25,47 +25,51 @@
 </head>
 
 <body>
-    <div class="mobile-side">
-        <ol class="d-block text-white text-center">
-            <li class="m-nav-item" onclick="moveEvent(this)" data-target="main">
-                <a class="cursor-pointer">
-                    <h1 class="nav-text"> Main</h1>
-                </a>
-            </li>
-            <li class="m-nav-item" onclick="moveEvent(this)" data-target="about" style="margin: 2rem 0px;">
-                <a class="cursor-pointer">
-                    <h1 class="nav-text"> About</h1>
-                </a>
-            </li>
-            <li class="m-nav-item" onclick="moveEvent(this)" data-target="exp_pro">
-                <a class="cursor-pointer">
-                    <h1 class="nav-text">Experience & Project</h1>
-                </a>
-            </li>
-        </ol>
+    <div class="custom-loading d-flex align-items-center justify-content-center text-white">
+        <h1 class="text-center">Welcome <br>Mc's Portfolio</h1>
     </div>
     <div id="wrap">
+        <div class="mobile-side">
+            <ol class="d-block text-white text-center">
+                <li class="m-nav-item" onclick="moveEvent(this)" data-target="main">
+                    <a class="cursor-pointer">
+                        <h1 class="nav-text"> Main</h1>
+                    </a>
+                </li>
+                <li class="m-nav-item" onclick="moveEvent(this)" data-target="about" style="margin: 2rem 0px;">
+                    <a class="cursor-pointer">
+                        <h1 class="nav-text"> About</h1>
+                    </a>
+                </li>
+                <li class="m-nav-item" onclick="moveEvent(this)" data-target="exp_pro">
+                    <a class="cursor-pointer">
+                        <h1 class="nav-text">Experience & Project</h1>
+                    </a>
+                </li>
+            </ol>
+        </div>
+
         <!-- header -->
         <header class="w-100 position-fixed d-flex align-items-center justify-content-between" data-aos-delay="0"
             data-aos="fade-down">
-            <strong class="logo-link" data-aos-delay="100" data-aos="fade-down">Mc's Portfolio</strong>
+            <strong class="logo-link" data-aos-delay="2100" data-aos="fade-down">Mc's Portfolio</strong>
             <nav>
                 <ol class="d-flex align-items-center">
-                    <li class="nav-item main-item active" data-aos-delay="150" data-aos="fade-down"
+                    <li class="nav-item main-item active" data-aos-delay="2150" data-aos="fade-down"
                         onclick="moveEvent(this)" data-target="main">
                         <a class="cursor-pointer">
                             <span class="num">01</span>
                             <span class="nav-text">Main</span>
                         </a>
                     </li>
-                    <li class="nav-item about-item" data-aos-delay="300" data-aos="fade-down" onclick="moveEvent(this)"
+                    <li class="nav-item about-item" data-aos-delay="2300" data-aos="fade-down" onclick="moveEvent(this)"
                         data-target="about">
                         <a class="cursor-pointer">
                             <span class="num">02</span>
                             <span class="nav-text">About</span>
                         </a>
                     </li>
-                    <li class="nav-item exp-item" data-aos-delay="450" data-aos="fade-down" onclick="moveEvent(this)"
+                    <li class="nav-item exp-item" data-aos-delay="2450" data-aos="fade-down" onclick="moveEvent(this)"
                         data-target="exp_pro">
                         <a class="cursor-pointer">
                             <span class="num">03</span>
@@ -107,13 +111,13 @@
                 </svg>
 
                 <div class="intro-text-wrap">
-                    <h3 class="intro-text font-weight-bold mb-4" data-aos-delay="500" data-aos="fade-up">
+                    <h3 class="intro-text font-weight-bold mb-4" data-aos-delay="2500" data-aos="fade-up">
                         WELCOME!
                     </h3>
-                    <h1 class="intro-text font-weight-bold mb-5" data-aos-delay="600" data-aos="fade-up">
+                    <h1 class="intro-text font-weight-bold mb-5" data-aos-delay="2600" data-aos="fade-up">
                         Mc's PORTFOLIO
                     </h1>
-                    <h2 data-aos-delay="700" data-aos="fade-up">성실함과 꼼꼼함으로 똘똘뭉친 <br>웹 퍼블리셔 김민철입니다.</h2>
+                    <h2 data-aos-delay="2700" data-aos="fade-up">성실함과 꼼꼼함으로 똘똘뭉친 <br>웹 퍼블리셔 김민철입니다.</h2>
                 </div>
 
                 <!-- 스크롤 버튼 -->
@@ -354,17 +358,19 @@
             </div>
             <div class="company-descript">{{COMPANY_DESCRIPT}}</div>
             <div class="skills-tools"><font size="3" color="#b34831">[사용기술 & 협업툴]</font> {{SKILL_TOOL}}</div>
-            <div class="accordion project-elem cursor-pointer font-weight-bold text-danger company-{{COMPANY_ID}}" data-id="{{COMPANY_ID}}">
+            <div id="accordion">
+            <div class="accordion active project-elem cursor-pointer font-weight-bold text-danger company-{{COMPANY_ID}}" data-id="{{COMPANY_ID}}">
                 View Project
             </div>
-            <div class="panel panel-{{ID}}">
+            <div class="panel panel-{{ID}}" style="max-height: 100%;">
                 
             </div>
+        </div>
         </div>
     </script>
 
     <script type="text/html" id="panel-elem">
-        <div class="project-list" data-aos-delay="100" data-aos-duration="1000" data-aos="fade-right">
+        <div class="project-list">
             <div class=" project-name">
                 <div class="pb-0">{{NAME}}</div>
                 <div class="m-0 p-0">

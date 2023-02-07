@@ -121,9 +121,6 @@ window.addEventListener('scroll', () => {
 // 처음 페이지 로딩 시 경력사항 초기화
 initExprience("init");
 
-// 아코디언
-$("#accordion").accordion();
-
 const menu = document.querySelector(".wrap-bar");
 let count = 0;
 
@@ -139,5 +136,10 @@ menu.addEventListener("click", () => {
         menu.classList.add('deactive');
     }
 });
+
+setInterval(() => {
+    document.querySelector('.custom-loading').style.height = '0';
+    document.querySelector('.custom-loading').style.transition = '0.5s';
+}, 2000);
 
 AOS.init();

@@ -97,6 +97,15 @@ hr {
   height: 100%;
 }
 
+.custom-loading {
+  background-color: #000;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  position: fixed;
+}
+
 .mobile-side {
   display: none;
 }
