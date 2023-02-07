@@ -89,6 +89,7 @@ window.addEventListener('scroll', () => {
 
     // 헤더 nav-item 색 변경
     if (nowLoc >= (introLoc - headerHeight)) {
+        console.log("111");
         document.querySelector('header').style.color = '#212529';
         document.querySelector('header').style.transition = '0.4s';
         for (let i = 0; i < navItems.length; i++) {
@@ -127,7 +128,6 @@ const menu = document.querySelector(".wrap-bar");
 let count = 0;
 
 menu.addEventListener("click", () => {
-    console.log(count);
     menu.classList.toggle("active");
 
     document.querySelector('.mobile-side').style.width = menu.classList.contains('active') ? '100%' : '0%';
