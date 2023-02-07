@@ -624,6 +624,11 @@ header .frame {
 footer {
   height: 10rem;
   background: var(--item-color);
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 1024px) and (max-width: 1679px) {

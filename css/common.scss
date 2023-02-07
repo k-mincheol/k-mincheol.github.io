@@ -603,6 +603,11 @@ header {
 footer {
     height: 10rem;
     background: var(--item-color);
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 // 데스크탑
