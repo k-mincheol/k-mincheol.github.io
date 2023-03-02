@@ -578,6 +578,7 @@ header .frame {
   color: white !important;
   border-radius: 5px;
   padding: 0 0.2rem;
+  display: inline-block;
 }
 .full-wrap .article-box.pf-exprience .exprience-detail .project-list .project-link.user-link {
   background-color: rgba(0, 128, 0, 0.6);
